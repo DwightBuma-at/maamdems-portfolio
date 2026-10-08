@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roland James Labus — Software Development Manager</title>
+  <meta name="description" content="Portfolio of Roland James Labus — Software Development Manager at SIBS International Business Solutions.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Outfit (Display Logo/Accents), Inter (Body), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 8px 24px -4px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 14px 34px -4px rgba(31, 42, 55, 0.07)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Refined entrance animation */
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Controlled star sparkle */
+    @keyframes ambientTwinkle {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    .twinkle-star {
+      animation: ambientTwinkle 4.5s ease-in-out infinite;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+
+    /* Custom smooth page scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Interactive Tech Pill Chip Badge */
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: #FFFFFF;
+      border: 1.5px solid #E2DDD5;
+      color: #1F2A37;
+      box-shadow: 0 1px 3px rgba(31, 42, 55, 0.04);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .tech-chip:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 18px -3px rgba(31, 42, 55, 0.1), 0 3px 6px -1px rgba(31, 42, 55, 0.04);
+      border-color: #3B6991;
+      background: #FFFFFF;
+    }
+    .tech-chip:hover img {
+      transform: scale(1.1) rotate(2deg);
+    }
+    .tech-chip img {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Category Header Pill */
+    .category-header-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.75rem;
+      background: rgba(234, 242, 248, 0.88);
+      border: 1px solid rgba(213, 227, 239, 0.95);
+      color: #1E3A5F;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .category-header-pill svg,
+    .category-header-pill i {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    /* Section scroll offset to accommodate fixed navbar and land directly on section title */
+    .section-target {
+      scroll-margin-top: 3.85rem;
+    }
+    @media (min-width: 640px) {
+      .section-target {
+        scroll-margin-top: 4.25rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .section-target {
+        scroll-margin-top: 4.75rem;
+      }
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION (FIXED & STICKY WITH SMOOTH INDICATOR) ==================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="#home" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer group" title="Portfolio">
+          <span class="silver-shine font-display font-black text-xl sm:text-2xl tracking-[-0.03em] text-[#0F172A]">
+            Portfolio
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Dynamic Scroll Indicator Pill) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div id="desktop-nav-container" class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="#home" data-section="home" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="#about" data-section="about" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="#experience" data-section="experience" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="#projects" data-section="projects" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="#skills" data-section="skills" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="#contact" data-section="contact" class="nav-spy-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Direct Inquiry Trigger -->
+          <a href="#contact" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Solid 100% Opaque Light Theme with Clean Outlines) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-line bg-[#FBF9F5] shadow-2xl px-5 pt-3 pb-5 space-y-2">
+      <a href="#home" data-section="home" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-navy bg-white border-2 border-navy shadow-sm transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot w-2 h-2 rounded-full bg-navy"></span>
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy"></i>
+      </a>
+      <a href="#about" data-section="about" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot hidden w-2 h-2 rounded-full bg-navy"></span>
+          <span>About</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="#experience" data-section="experience" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot hidden w-2 h-2 rounded-full bg-navy"></span>
+          <span>Experience</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="#projects" data-section="projects" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot hidden w-2 h-2 rounded-full bg-navy"></span>
+          <span>Projects</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="#skills" data-section="skills" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot hidden w-2 h-2 rounded-full bg-navy"></span>
+          <span>Skills</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="#contact" data-section="contact" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="active-dot hidden w-2 h-2 rounded-full bg-navy"></span>
+          <span>Contact</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS (Delicate & Minimalist) ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>
+
+  <!-- ==================== MAIN CONTINUOUS SCROLL CONTAINER ==================== -->
+  <main class="flex-1 w-full relative z-10">
+
+    <!-- ========================================================================= -->
+    <!-- 1. HOME / HERO SECTION                                                    -->
+    <!-- ========================================================================= -->
+    <section id="home" class="section-target min-h-[calc(100vh-5rem)] flex items-center justify-center pt-24 sm:pt-28 pb-16 px-6 sm:px-10 lg:px-16">
+      <div class="w-full max-w-[1380px] mx-auto hero-animate">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-5 md:gap-10 lg:gap-14 xl:gap-20 items-center justify-center">
+
+          <!-- PICTURE & MOBILE INTRO (Top on mobile, Right on tablet/desktop) -->
+          <div class="order-1 md:order-2 md:col-span-5 flex flex-col items-center justify-center pt-1 md:pt-0 gap-2.5 sm:gap-3">
+            
+            <!-- Cute + Editorial Introductor Badge (Visible on Mobile only above picture) -->
+            <div class="md:hidden inline-flex items-center gap-2 px-3.5 py-1 rounded-lg bg-white border border-line text-[11px] sm:text-xs font-mono tracking-wider text-navy uppercase shadow-subtle w-fit">
+              <span class="w-2 h-2 rounded-full bg-peach"></span>
+              <span>HELLO, WORLD &mdash; I'M</span>
+              <span class="text-sage font-mono text-xs">✦</span>
+            </div>
+
+            <!-- Centered Picture Card with clean editorial frame -->
+            <div class="relative flex items-center justify-center w-full">
+              <!-- Subtle editorial corner stars & details -->
+              <div class="absolute -top-2 right-8 sm:right-12 text-peach font-mono text-base sm:text-lg twinkle-star select-none">✦</div>
+              <div class="absolute -bottom-2 left-8 sm:left-12 text-sage font-mono text-base sm:text-lg select-none">✦</div>
+              <div class="absolute top-1/2 -right-5 text-mutedblue/50 font-mono text-sm select-none hidden xl:block">✻</div>
+
+              <div class="relative w-full max-w-[190px] sm:max-w-[240px] md:max-w-[320px] lg:max-w-[380px] xl:max-w-[410px] p-2 sm:p-2.5 md:p-3 rounded-[22px] bg-white border border-line shadow-card select-none">
+                <img 
+                  src="maam%20dems.png" 
+                  alt="Roland James Labus — Portrait" 
+                  class="w-full h-auto rounded-[16px] sm:rounded-[18px] select-none block pointer-events-none"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- EDITORIAL CONTENT (Bottom on mobile, Left on tablet/desktop) -->
+          <div class="order-2 md:order-1 md:col-span-7 space-y-4 sm:space-y-5 lg:space-y-7 xl:space-y-8 flex flex-col items-center text-center md:items-start md:text-left justify-center mt-1 sm:mt-2 md:mt-0">
+            
+            <!-- Cute + Editorial Introductor Badge (Visible on Desktop md+) -->
+            <div class="hidden md:inline-flex items-center gap-2.5 px-4 py-1.5 rounded-lg bg-white border border-line text-xs font-mono tracking-wider text-navy uppercase shadow-subtle w-fit">
+              <span class="w-2.5 h-2.5 rounded-full bg-peach"></span>
+              <span>HELLO, WORLD &mdash; I'M</span>
+              <span class="text-sage font-mono text-sm">✦</span>
+            </div>
+
+            <!-- Name & Title Hierarchy -->
+            <div class="space-y-2 sm:space-y-2.5">
+              <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] xl:text-[72px] text-navy tracking-tight leading-[1.08] select-none">
+                Roland James Labus
+              </h1>
+              
+              <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+                <span class="font-heading font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-mutedblue tracking-tight">
+                  Software Development Manager
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-mono px-3 py-1 rounded-lg bg-peach-light border border-peach/50 text-navy font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-peach"></span>
+                  SIBS International
+                </span>
+              </div>
+            </div>
+
+            <!-- Editorial Lead Paragraph -->
+            <p class="text-navy-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
+              A software and IT professional with experience in software development, system management, cloud hosting, database management, technical support, reporting, dashboards, system integrations, and project management.
+            </p>
+
+            <!-- Current Position Capsule Note -->
+            <div class="p-3.5 sm:p-4 lg:p-5 rounded-2xl bg-white border border-line shadow-card max-w-2xl flex items-start text-left gap-3.5 sm:gap-4">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-mutedblue-light flex items-center justify-center shrink-0 mt-0.5 text-mutedblue border border-mutedblue/20 shadow-subtle">
+                <i data-lucide="briefcase" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+              </div>
+              <p class="text-xs sm:text-sm lg:text-[15px] text-navy-muted leading-relaxed">
+                <strong class="text-navy font-semibold">Currently:</strong> Leading software development, infrastructure, and technology-driven operations at <span class="text-navy font-semibold underline decoration-mutedblue/50 underline-offset-4">SIBS International Business Solutions</span>.
+              </p>
+            </div>
+
+            <!-- Clean Rectangular CTA Buttons with Proper Spacing -->
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-3.5 sm:gap-5 pt-1 sm:pt-2">
+              <a href="#experience" class="inline-flex items-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-navy text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-mutedblue transition-all duration-200 shadow-card hover:shadow-elevated group">
+                <span>Explore Experience</span>
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-ivory/80 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform"></i>
+              </a>
+
+              <a href="#contact" class="inline-flex items-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-white border border-navy/30 text-navy text-xs sm:text-sm font-semibold tracking-wide hover:border-navy hover:bg-ivory-subtle transition-all duration-200 shadow-subtle">
+                <i data-lucide="mail" class="w-4 h-4 text-mutedblue"></i>
+                <span>Get in Touch</span>
+              </a>
+
+              <div class="hidden xl:flex items-center gap-3 pl-3 text-navy-subtle">
+                <svg class="w-6 h-6 text-peach transform -rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V7H7" transform="rotate(180 12 12)"/>
+                </svg>
+                <span class="font-mono text-xs sm:text-[13px] text-navy-subtle tracking-tight">available for consultations</span>
+              </div>
+            </div>
+
+            <!-- Bottom Micro-Details: Clean Organized Editorial Dots -->
+            <div class="pt-2 sm:pt-3 flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6 text-xs sm:text-sm font-mono text-navy-subtle">
+              <span class="flex items-center gap-1.5 sm:gap-2">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sage"></i>
+                Davao City, Philippines
+              </span>
+              <span class="text-line">•</span>
+              <span class="flex items-center gap-1.5 sm:gap-2">
+                <span class="w-2 h-2 rounded-full bg-sage"></span>
+                Full Lifecycle Systems
+              </span>
+              <span class="text-line hidden sm:inline">•</span>
+              <span class="flex items-center gap-1.5 sm:gap-2">
+                <span class="text-peach">✦</span>
+                IT Leadership
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. ABOUT SECTION                                                          -->
+    <!-- ========================================================================= -->
+    <section id="about" class="section-target pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-[#E2DDD5]/70">
+      <div class="w-full max-w-[1560px] mx-auto space-y-6 sm:space-y-8">
+
+        <!-- HEADER STRIP -->
+        <div class="pb-4 border-b border-[#E2DDD5]">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+            About
+          </h2>
+        </div>
+
+        <!-- 1. PROFESSIONAL OVERVIEW & BIO CARD -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6">
+          <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#1E3A5F] font-bold">
+            <span class="px-2 py-0.5 rounded bg-[#EAF2F8] text-[#1E3A5F]">01</span>
+            <span>&bull;</span>
+            <span>Professional Overview &amp; Bio</span>
+          </div>
+
+          <div class="space-y-5 text-[#0F172A] text-base sm:text-lg leading-relaxed">
+            <p class="font-medium text-[#1E293B]">
+              <strong class="font-bold text-[#0F172A]">Roland James D. Labus</strong> is an IT and software engineering professional with extensive cross-functional experience across software development, IT operations, cloud architecture, system analysis and design, technical project leadership, and enterprise reporting solutions.
+            </p>
+
+            <div class="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E8E2D8] space-y-3">
+              <h3 class="text-xs font-mono uppercase tracking-wider text-[#334155] font-bold">Key Leadership &amp; Engineering Focus</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 text-sm sm:text-[15px] text-[#1E293B] leading-relaxed">
+                <div class="flex items-start gap-2.5">
+                  <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                  <span>Directs end-to-end software planning, development, implementation, and system architecture for internal systems and digital solutions.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                  <span>Oversees full-stack engineering initiatives across front-end user experience, robust backend APIs, and database integrity.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                  <span>Reviews technical requirements and translates complex operational workflows into practical, scalable digital solutions.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                  <span>Ensures enterprise standards for quality assurance, high performance, data visibility, and secure IT operations.</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-[#334155] text-sm sm:text-base leading-relaxed">
+              <strong class="text-[#0F172A] font-bold">Career Breadth:</strong> Proven track record spanning public sector IT infrastructure, enterprise commercial sales distribution platforms, e-learning digital portals, multi-channel e-commerce systems, and client technology services.
+            </p>
+
+            <blockquote class="border-l-4 border-[#C87D6B] bg-[#FFF8F5] p-5 rounded-r-2xl border-y border-r border-[#F3E2DC] space-y-1.5">
+              <div class="text-xs font-mono text-[#9C4B37] uppercase tracking-wider font-bold">Professional Objective</div>
+              <p class="text-base sm:text-lg italic text-[#0F172A] font-heading font-medium leading-relaxed">
+                &ldquo;To secure a position where I can efficiently contribute my skills and abilities to the growth of the organization and build my professional career.&rdquo;
+              </p>
+            </blockquote>
+          </div>
+        </article>
+
+        <!-- 2. FORMAL EDUCATION & CERTIFICATIONS (2-COLUMN GRID) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+          <!-- Education Card -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#9C4B37] font-bold mb-5">
+                <span class="px-2 py-0.5 rounded bg-[#FCF0EC] text-[#9C4B37]">02</span>
+                <span>&bull;</span>
+                <span>Formal Education</span>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-4 border-b border-[#E8E2D8]">
+                  <div>
+                    <h3 class="font-heading font-bold text-lg text-[#0F172A]">
+                      Bachelor of Science in Computer Science (BSCS)
+                    </h3>
+                    <p class="text-sm font-medium text-[#475569]">
+                      University of Mindanao &bull; Matina, Davao City
+                    </p>
+                  </div>
+                  <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF] w-fit">
+                    Completed 2018
+                  </span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-4 border-b border-[#E8E2D8]">
+                  <div>
+                    <h3 class="font-heading font-bold text-base text-[#0F172A]">
+                      Secondary Education
+                    </h3>
+                    <p class="text-sm font-medium text-[#475569]">
+                      Catalunan Pequeño National High School &bull; Davao City
+                    </p>
+                    <p class="text-xs font-semibold text-[#B4533C] mt-1">
+                      Honors: Top 12 in Academic and Curricular
+                    </p>
+                  </div>
+                  <span class="text-xs font-mono font-semibold text-[#475569]">
+                    Completed 2010
+                  </span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <div>
+                    <h3 class="font-heading font-bold text-base text-[#0F172A]">
+                      Primary Education
+                    </h3>
+                    <p class="text-sm font-medium text-[#475569]">
+                      Catalunan Pequeño Elementary School &bull; Davao City
+                    </p>
+                  </div>
+                  <span class="text-xs font-mono font-semibold text-[#475569]">
+                    Completed 2007
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certifications Card -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#2E6F40] font-bold mb-5">
+                <span class="px-2 py-0.5 rounded bg-[#EAF5ED] text-[#2E6F40]">03</span>
+                <span>&bull;</span>
+                <span>Certifications &amp; Honors</span>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                  <div>
+                    <h4 class="font-heading font-bold text-base text-[#0F172A]">Database Administration</h4>
+                    <p class="text-xs sm:text-sm font-medium text-[#475569]">Microsoft Training Associate</p>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-[#1E3A5F] px-2.5 py-0.5 rounded bg-[#EAF2F8] border border-[#D5E3EF] w-fit">MTA Certified</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                  <div>
+                    <h4 class="font-heading font-bold text-base text-[#0F172A]">National Certificate II (NC II)</h4>
+                    <p class="text-xs sm:text-sm font-medium text-[#475569]">Computer Hardware Servicing</p>
+                  </div>
+                  <span class="text-xs font-mono font-semibold text-[#475569]">Cert. No. 16112402017787</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                  <div>
+                    <h4 class="font-heading font-bold text-base text-[#0F172A]">Overall Champion &mdash; Technology Competition</h4>
+                    <p class="text-xs sm:text-sm font-medium text-[#475569]">Saint Dominic Savio College</p>
+                  </div>
+                  <span class="text-xs font-mono font-bold text-[#9C4B37] px-2.5 py-0.5 rounded bg-[#FCF0EC] border border-[#F3E2DC] w-fit">Honor Award</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                  <div>
+                    <h4 class="font-heading font-bold text-base text-[#0F172A]">Certificate of Accomplishment &mdash; OJT Project Manager</h4>
+                    <p class="text-xs sm:text-sm font-medium text-[#475569]">Eversun Software Philippines</p>
+                  </div>
+                  <span class="text-xs font-mono font-semibold text-[#475569]">2016 &ndash; 2017</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <div>
+                    <h4 class="font-heading font-bold text-base text-[#0F172A]">Certificate of Accomplishment &mdash; AT&amp;T Training</h4>
+                    <p class="text-xs sm:text-sm font-medium text-[#475569]">VXI Global Holdings</p>
+                  </div>
+                  <span class="text-xs font-mono font-semibold text-[#475569]">Credential</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. CIVIC LEADERSHIP & COMMUNITY SERVICE CARD -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#1E3A5F] font-bold">
+            <span class="px-2 py-0.5 rounded bg-[#EAF2F8] text-[#1E3A5F]">04</span>
+            <span>&bull;</span>
+            <span>Civic Leadership &amp; Community Service</span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-[#0F172A]">
+                  Sangguniang Kabataan Kagawad
+                </h3>
+                <p class="text-sm font-medium text-[#2563EB]">
+                  Elected Youth Council Official &bull; Barangay Catalunan Pequeño, Davao City, Philippines
+                </p>
+              </div>
+              <span class="inline-flex items-center text-xs sm:text-sm font-mono font-bold text-[#9C4B37] px-3 py-1 rounded-full bg-[#FCF0EC] border border-[#F3E2DC] w-fit">
+                June 2016 &ndash; November 30, 2023
+              </span>
+            </div>
+            <p class="text-sm sm:text-base text-[#334155] leading-relaxed">
+              Served over 7 consecutive years in elected public office. Spearheaded community youth development programs, public service projects, policy consultations, and local leadership initiatives.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. EXPERIENCE SECTION                                                     -->
+    <!-- ========================================================================= -->
+    <section id="experience" class="section-target pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-[#E2DDD5]/70">
+      <div class="w-full max-w-[1560px] mx-auto space-y-6 sm:space-y-8">
+
+        <!-- HEADER STRIP -->
+        <div class="pb-4 border-b border-[#E2DDD5]">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+            Experience
+          </h2>
+        </div>
+
+        <!-- STAGGERED ALTERNATING CARDS -->
+        <div class="relative w-full space-y-10 lg:space-y-12">
+
+          <!-- Central subtle spine on large screens -->
+          <div class="hidden lg:block absolute left-1/2 top-4 bottom-4 w-px bg-gradient-to-b from-[#E2DDD5] via-[#CBD5E1] to-[#E2DDD5] -translate-x-1/2 pointer-events-none" aria-hidden="true"></div>
+
+          <!-- 1ST EXP: LEFT -->
+          <div class="w-full flex lg:justify-start">
+            <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+              <span class="hidden lg:block absolute -right-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+              
+              <div class="space-y-3">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                    Nov 05, 2024 &ndash; Present
+                  </span>
+                  <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#EAF5ED] text-[#2E6F40] border border-[#D1E8D7]">
+                    Current Role &bull; Latest
+                  </span>
+                </div>
+
+                <div>
+                  <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                    Software Development Manager
+                  </h3>
+                  <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                    SIBS International Business Solutions
+                  </p>
+                </div>
+
+                <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                  <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Lead planning, development, implementation, and continuous improvement of internal software systems and digital solutions.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Manage the software development team; oversee front-end and back-end activities.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Review technical requirements and ensure alignment with business needs and quality standards.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Oversee reports and dashboard development, system integrations, database improvements, deployment, and critical troubleshooting.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Work with different departments to translate operational requirements into practical, scalable technical solutions.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Improve reporting accuracy, data visibility, operational efficiency, and overall business operations.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2ND EXP: RIGHT -->
+          <div class="w-full flex lg:justify-end">
+            <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+              <span class="hidden lg:block absolute -left-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+              <div class="space-y-3">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                    Oct 16, 2023 &ndash; Dec 31, 2023
+                  </span>
+                  <span class="text-xs font-mono text-[#64748B]">Government Regional</span>
+                </div>
+
+                <div>
+                  <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                    Regional IT Support Staff
+                  </h3>
+                  <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                    Department of Agrarian Reform &ndash; Region XI
+                  </p>
+                </div>
+
+                <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                  <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Managed the CCLOA Interim Eco-System database.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Reviewed database entries and audited data entries.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Generated regular reports, provided findings and data analysis, and recommended system improvements.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Monitored Field Validation Team data entries and reported metrics.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Provided regional ICT technical support, documented incidents, assisted with upgrades, and performed technical tasks.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3RD EXP: LEFT -->
+          <div class="w-full flex lg:justify-start">
+            <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+              <span class="hidden lg:block absolute -right-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+              <div class="space-y-3">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                    Oct 2021 &ndash; Sep 2022
+                  </span>
+                  <span class="text-xs font-mono text-[#64748B]">Commercial Sales Systems</span>
+                </div>
+
+                <div>
+                  <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                    Sales System Assistant
+                  </h3>
+                  <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                    JS Unitrade Merchandise Inc.
+                  </p>
+                </div>
+
+                <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                  <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Supported sales system administration, daily operations, reporting tools, and business processes for KPI and revenue targets.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Generated and consolidated Sales-to-Trade (STT) reports for distributors across Mindanao.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Validated sales data, prepared recurring summaries, and monitored distributor performance.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Troubleshot sales-system issues and provided technical support.</span></li>
+                    <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Coordinated with sales teams, distributors, and internal departments to resolve discrepancies and improve process accuracy.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- TOGGLEABLE OLDER EXPERIENCES (4th to 8th) -->
+          <div id="more-experiences" class="hidden space-y-10 lg:space-y-12 transition-all duration-300">
+
+            <!-- 4TH EXP: RIGHT -->
+            <div class="w-full flex lg:justify-end">
+              <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+                <span class="hidden lg:block absolute -left-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                      Nov 2019 &ndash; Aug 2021
+                    </span>
+                    <span class="text-xs font-mono text-[#64748B]">Cloud &amp; Mobile Systems</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                      Software Developer / Cloud Manager
+                    </h3>
+                    <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                      Falculan Twins Review Center
+                    </p>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                    <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Designed and created web-based systems.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Administered cloud hosting and managed databases.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Maintained security protocols and access protections.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Developed and designed a video conferencing application with multiple security features on Android.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 5TH EXP: LEFT -->
+            <div class="w-full flex lg:justify-start">
+              <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+                <span class="hidden lg:block absolute -right-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                      Mar 2018 &ndash; Jan 2021
+                    </span>
+                    <span class="text-xs font-mono text-[#64748B]">Multi-Discipline Role</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                      Technical Support / Graphic Designer / Project Manager / OJT Trainer
+                    </h3>
+                    <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                      Eayana E-Commerce Concepts
+                    </p>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#F1EFEA] space-y-3">
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-mono uppercase tracking-wider text-[#1E3A5F] font-bold">IT, Hardware &amp; Security</h4>
+                      <p class="text-sm text-[#334155] leading-relaxed">
+                        Maintained and monitored computer hardware, software, and network systems. Prepared regular equipment inventory reports. Assisted in designing network topology, maintaining network structure, and implementing security measures against spam, malware, and threats.
+                      </p>
+                    </div>
+
+                    <div class="space-y-1 pt-1 border-t border-[#F1EFEA]/80">
+                      <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">OJT Training Leadership</h4>
+                      <p class="text-sm text-[#334155] leading-relaxed">
+                        Managed seasonal IT OJT trainees from various academic institutions. Conducted technical assessments, structured training sessions, and performance reviews to identify strengths and development areas.
+                      </p>
+                    </div>
+
+                    <div class="space-y-1 pt-1 border-t border-[#F1EFEA]/80">
+                      <h4 class="text-xs font-mono uppercase tracking-wider text-[#2E6F40] font-bold">Graphic Design (Australian Accounts)</h4>
+                      <p class="text-sm text-[#334155] leading-relaxed">
+                        Conceptualized and created clean, effective business advertisements, student resumes, social media banners, and marketing layouts for Australian client accounts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 6TH EXP: RIGHT -->
+            <div class="w-full flex lg:justify-end">
+              <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+                <span class="hidden lg:block absolute -left-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                      Oct 2016 &ndash; Apr 2017
+                    </span>
+                    <span class="text-xs font-mono text-[#64748B]">Project Management</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                      Project Manager &ndash; OJT
+                    </h3>
+                    <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                      Eversun Software Philippines
+                    </p>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                    <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Provided technical and programmatic support, oversight, and monitoring for company web-based systems.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Supported co-OJT trainees across project planning, work-plan implementation, monitoring, evaluation, and project-status reporting.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 7TH EXP: LEFT -->
+            <div class="w-full flex lg:justify-start">
+              <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+                <span class="hidden lg:block absolute -right-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                      Oct 2013 &ndash; Mar 2014
+                    </span>
+                    <span class="text-xs font-mono text-[#64748B]">US Client Operations</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                      Accounts Associate
+                    </h3>
+                    <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                      VXI Global Holdings VB
+                    </p>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                    <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Provided support and technical walkthrough assistance for US clients.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Delivered expertise regarding plan coverage and accounts.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Assisted with case completion adhering to approved measures and quality guidelines.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 8TH EXP: RIGHT -->
+            <div class="w-full flex lg:justify-end">
+              <article class="exp-card w-full lg:w-[calc(50%-1.75rem)] bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated relative group">
+                <span class="hidden lg:block absolute -left-[2.25rem] top-8 w-3.5 h-3.5 rounded-full bg-[#3B6991] ring-4 ring-white border-2 border-[#1E3A5F] shadow-sm z-10"></span>
+
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                      Nov 2011 &ndash; Oct 2012
+                    </span>
+                    <span class="text-xs font-mono text-[#64748B]">Market Analytics &bull; First Role</span>
+                  </div>
+
+                  <div>
+                    <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                      Market Researcher
+                    </h3>
+                    <p class="font-heading font-bold text-base sm:text-lg text-[#3B6991] mt-0.5">
+                      Survey Sampling International Philippines
+                    </p>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#F1EFEA] space-y-2">
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#9C4B37] font-bold">Responsibilities</h4>
+                    <ul class="space-y-2 text-sm text-[#334155] leading-relaxed">
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Conducted research and gathered external data to help market products and services.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Collected customer demographic information, preferences, needs, and buying habits.</span></li>
+                      <li class="flex items-start gap-2.5"><span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span><span>Helped determine potential markets, product demand, and pricing strategies.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+          <!-- End of #more-experiences -->
+
+          <!-- TOGGLE BUTTON FOR ALL EXPERIENCES -->
+          <div class="pt-6 pb-2 flex flex-col items-center justify-center relative z-20">
+            <button 
+              id="toggle-exp-btn" 
+              type="button" 
+              class="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white border-2 border-[#CBD5E1] text-[#0F172A] text-sm font-bold hover:border-[#3B6991] hover:bg-[#F8F9FA] hover:shadow-card transition-all duration-200 shadow-subtle cursor-pointer select-none"
+              aria-expanded="false"
+              aria-controls="more-experiences"
+            >
+              <span id="toggle-exp-text">View All Experiences</span>
+              <span class="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-[#EAF2F8] text-[#1E3A5F] text-xs font-mono font-bold border border-[#D5E3EF] group-hover:bg-[#3B6991] group-hover:text-white transition-colors">
+                +5 more
+              </span>
+              <i id="toggle-exp-icon" data-lucide="chevron-down" class="w-4 h-4 text-[#3B6991] transition-transform duration-300"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. FEATURED PROJECTS SECTION                                              -->
+    <!-- ========================================================================= -->
+    <section id="projects" class="section-target pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-[#E2DDD5]/70">
+      <div class="w-full max-w-[1560px] mx-auto space-y-6 sm:space-y-8">
+
+        <!-- HEADER STRIP -->
+        <div class="pb-4 border-b border-[#E2DDD5]">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+            Featured Projects
+          </h2>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+          <!-- 1. FEATURED: FALCULAN TWINS ONLINE REVIEW PLATFORM -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="globe" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Live Production Portal
+                </span>
+                <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#EAF5ED] text-[#2E6F40] border border-[#D1E8D7]">
+                  Featured
+                </span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  Falculan Twins Review Center
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  Web Portal &bull; Cloud Hosting &bull; E-Learning Infrastructure
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Architected and delivered the comprehensive web-based platform for reviewees and academic instructors. Configured resilient cloud server infrastructure, administered student databases, and ensured strict security protocols and high availability during national exam cycles.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="cloud" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>Cloud Hosting</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="database" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>MySQL</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="code" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>PHP / Web</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="shield" class="w-3.5 h-3.5 text-[#E07A5F]"></i>
+                  <span>Cloudflare</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <a href="https://falculantwins.com/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1F2A37] text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-[#3B6991] transition-colors shadow-subtle group/btn">
+                <span>Visit falculantwins.com</span>
+                <i data-lucide="external-link" class="w-4 h-4 text-[#CBD5E1] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+              </a>
+
+              <span class="text-xs font-mono text-[#64748B]">Active Domain</span>
+            </div>
+          </article>
+
+          <!-- 2. SECURE ANDROID VIDEO CONFERENCING APPLICATION -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Android Mobile Application
+                </span>
+                <span class="text-xs font-mono text-[#64748B]">Custom App</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  Secure Video Conferencing App
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  Android Platform &bull; Zoom SDK Integration &bull; Multi-Security
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Designed and developed a specialized Android video conference application tailored for distance learning. Integrated meeting SDKs with multiple security features to prevent unauthorized stream recording, restricted screen captures, and managed protected meeting rooms.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                  <span>Android Studio</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="video" class="w-3.5 h-3.5 text-[#2563EB]"></i>
+                  <span>Zoom SDK</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="coffee" class="w-3.5 h-3.5 text-[#B45309]"></i>
+                  <span>Java / Kotlin</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>Security Protocols</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>Multi-layer Protection</span>
+              </div>
+              <span class="text-xs font-mono text-[#64748B]">Falculan Twins Ecosystem</span>
+            </div>
+          </article>
+
+          <!-- 3. CCLOA INTERIM ECO-SYSTEM DATABASE -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="database" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Public Sector Database
+                </span>
+                <span class="text-xs font-mono text-[#64748B]">Gov Infrastructure</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  CCLOA Interim Eco-System
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  Dept. of Agrarian Reform Region XI &bull; Land Ownership Registry
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Managed, audited, and maintained the Certificate of Land Ownership Award (CCLOA) regional database. Audited entries submitted by Field Validation Teams, generated critical recurring compliance reports, and ensured data integrity for agrarian beneficiaries.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="server" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>Database Administration</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="check-check" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                  <span>Data Auditing</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-[#059669]"></i>
+                  <span>Reporting Automation</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="network" class="w-3.5 h-3.5 text-[#6366F1]"></i>
+                  <span>Field ICT Systems</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                <span>High-Integrity Audit</span>
+              </div>
+              <span class="text-xs font-mono text-[#64748B]">Region XI Operations</span>
+            </div>
+          </article>
+
+          <!-- 4. SALES-TO-TRADE (STT) REPORTING ENGINE -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Commercial Analytics
+                </span>
+                <span class="text-xs font-mono text-[#64748B]">Enterprise Distribution</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  Sales-to-Trade (STT) Reporting Pipeline
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  JS Unitrade Merchandise Inc. &bull; Mindanao Distribution
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Engineered data consolidation workflows for commercial sales distributors across Mindanao. Validated multi-party sales records, eliminated transactional discrepancies, and generated recurring executive summaries directly supporting revenue and quota KPI tracking.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-[#D97706]"></i>
+                  <span>Power BI / Excel</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="shopping-cart" class="w-3.5 h-3.5 text-[#2563EB]"></i>
+                  <span>Sales Systems</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="git-merge" class="w-3.5 h-3.5 text-[#7C3AED]"></i>
+                  <span>Data Reconciliation</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="target" class="w-3.5 h-3.5 text-[#DC2626]"></i>
+                  <span>KPI Analytics</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+                <span>High Precision Metrics</span>
+              </div>
+              <span class="text-xs font-mono text-[#64748B]">Commercial Logistics</span>
+            </div>
+          </article>
+
+          <!-- 5. SIBS INTERNAL OPERATIONAL SOFTWARE & DASHBOARDS -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Internal Enterprise Suite
+                </span>
+                <span class="text-xs font-mono text-[#64748B]">Current Architecture</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  Internal Digital Solutions &amp; Reporting Suite
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  SIBS International Business Solutions &bull; Management Lead
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Direction and architectural oversight of internal operations software, executive dashboard reporting, system integrations, and continuous deployment workflows. Facilitates smooth cross-departmental data visibility and process automation.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  <span>Full-Stack Systems</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="webhook" class="w-3.5 h-3.5 text-[#0284C7]"></i>
+                  <span>REST APIs</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="database" class="w-3.5 h-3.5 text-[#0D9488]"></i>
+                  <span>MySQL</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="git-branch" class="w-3.5 h-3.5 text-[#E11D48]"></i>
+                  <span>CI/CD Deployment</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+                <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+                <span>Active Internal Suite</span>
+              </div>
+              <span class="text-xs font-mono text-[#64748B]">SIBS International</span>
+            </div>
+          </article>
+
+          <!-- 6. MULTI-CHANNEL E-COMMERCE CLIENT MARKETING & DIGITAL ASSETS -->
+          <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                  <i data-lucide="palette" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Digital Production
+                </span>
+                <span class="text-xs font-mono text-[#64748B]">Australian Accounts</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                  E-Commerce Creative &amp; Infrastructure
+                </h3>
+                <p class="text-xs font-mono text-[#64748B] mt-1">
+                  Eayana E-Commerce Concepts &bull; Global Client Deliverables
+                </p>
+              </div>
+
+              <p class="text-sm text-[#334155] leading-relaxed">
+                Produced digital marketing banners, clean advertising layouts, and branded commercial materials for Australian client businesses while administering workstation uptime and endpoint cybersecurity across team members.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="image" class="w-3.5 h-3.5 text-[#31A8FF]"></i>
+                  <span>Adobe Photoshop</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="pen-tool" class="w-3.5 h-3.5 text-[#FF9A00]"></i>
+                  <span>Illustrator</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#7D2AE8]"></i>
+                  <span>Canva Pro</span>
+                </span>
+                <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                  <span>Endpoint Security</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                <span>Delivered Internationally</span>
+              </div>
+              <span class="text-xs font-mono text-[#64748B]">Australian Client Projects</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. TOOLS & SOFTWARE USED (SKILLS) SECTION                                 -->
+    <!-- ========================================================================= -->
+    <section id="skills" class="section-target pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-[#E2DDD5]/70">
+      <div class="w-full max-w-[1560px] mx-auto space-y-5 sm:space-y-6">
+
+        <!-- HEADER STRIP -->
+        <div class="pb-4 border-b border-[#E2DDD5]">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+            Tools &amp; Software Used
+          </h2>
+        </div>
+
+        <!-- 6 CATEGORY CONTAINERS (HIGH-QUALITY & INTERACTIVE) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+
+          <!-- 1. FRONTEND & WEB TECHNOLOGIES -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="code" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>Frontend &amp; Web</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="Bootstrap">
+                <img src="assets/logos/bootstrap.svg" alt="Bootstrap Logo" loading="lazy">
+                <span>Bootstrap</span>
+              </div>
+              <div class="tech-chip" title="jQuery">
+                <img src="assets/logos/jquery.svg" alt="jQuery Logo" loading="lazy">
+                <span>jQuery</span>
+              </div>
+              <div class="tech-chip" title="HTML5">
+                <img src="assets/logos/html5.svg" alt="HTML5 Logo" loading="lazy">
+                <span>HTML5</span>
+              </div>
+              <div class="tech-chip" title="CSS3">
+                <img src="assets/logos/css3.svg" alt="CSS3 Logo" loading="lazy">
+                <span>CSS3</span>
+              </div>
+              <div class="tech-chip" title="JavaScript">
+                <img src="assets/logos/javascript.svg" alt="JavaScript Logo" loading="lazy">
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. DEVELOPMENT IDES & APIS -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="terminal" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>IDEs &amp; Environments</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="Android Studio">
+                <img src="assets/logos/androidstudio.svg" alt="Android Studio Logo" loading="lazy">
+                <span>Android Studio</span>
+              </div>
+              <div class="tech-chip" title="Visual Studio">
+                <img src="assets/logos/visualstudio.svg" alt="Visual Studio Logo" loading="lazy">
+                <span>Visual Studio</span>
+              </div>
+              <div class="tech-chip" title="Eclipse IDE">
+                <img src="assets/logos/eclipse.svg" alt="Eclipse IDE Logo" loading="lazy">
+                <span>Eclipse IDE</span>
+              </div>
+              <div class="tech-chip" title="Zoom SDK">
+                <img src="assets/logos/zoom.svg" alt="Zoom SDK Logo" loading="lazy">
+                <span>Zoom SDK</span>
+              </div>
+              <div class="tech-chip" title="REST APIs">
+                <img src="assets/logos/api.svg" alt="REST APIs Logo" loading="lazy">
+                <span>API'S</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DATABASE & CLOUD HOSTING -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="database" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>Database &amp; Cloud</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="MySQL">
+                <img src="assets/logos/mysql.svg" alt="MySQL Logo" loading="lazy">
+                <span>MySQL</span>
+              </div>
+              <div class="tech-chip" title="Cloudflare">
+                <img src="assets/logos/cloudflare.svg" alt="Cloudflare Logo" loading="lazy">
+                <span>Cloudflare</span>
+              </div>
+              <div class="tech-chip" title="Hostinger">
+                <img src="assets/logos/hostinger.svg" alt="Hostinger Logo" loading="lazy">
+                <span>Hostinger</span>
+              </div>
+              <div class="tech-chip" title="WordPress">
+                <img src="assets/logos/wordpress.svg" alt="WordPress Logo" loading="lazy">
+                <span>WordPress</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. CREATIVE & MULTIMEDIA -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="palette" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>Creative &amp; Multimedia</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="Canva Pro">
+                <img src="assets/logos/canva.svg" alt="Canva Pro Logo" loading="lazy">
+                <span>CANVA Pro</span>
+              </div>
+              <div class="tech-chip" title="Adobe Photoshop">
+                <img src="assets/logos/photoshop.svg" alt="Adobe Photoshop Logo" loading="lazy">
+                <span>Adobe Photoshop</span>
+              </div>
+              <div class="tech-chip" title="Adobe Illustrator">
+                <img src="assets/logos/illustrator.svg" alt="Adobe Illustrator Logo" loading="lazy">
+                <span>Adobe Illustrator</span>
+              </div>
+              <div class="tech-chip" title="Adobe After Effects">
+                <img src="assets/logos/aftereffects.svg" alt="Adobe After Effects Logo" loading="lazy">
+                <span>After Effects</span>
+              </div>
+              <div class="tech-chip" title="CapCut">
+                <img src="assets/logos/capcut.svg" alt="CapCut Logo" loading="lazy">
+                <span>CapCut</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. ENTERPRISE & PRODUCTIVITY -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="briefcase" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>Enterprise Productivity</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="Microsoft Office">
+                <img src="assets/logos/msoffice.svg" alt="Microsoft Office Logo" loading="lazy">
+                <span>Microsoft Office</span>
+              </div>
+              <div class="tech-chip" title="Microsoft Teams">
+                <img src="assets/logos/msteams.svg" alt="Microsoft Teams Logo" loading="lazy">
+                <span>Microsoft Teams</span>
+              </div>
+              <div class="tech-chip" title="SharePoint">
+                <img src="assets/logos/sharepoint.svg" alt="SharePoint Logo" loading="lazy">
+                <span>SharePoint</span>
+              </div>
+              <div class="tech-chip" title="Google Calendar">
+                <img src="assets/logos/googlecalendar.svg" alt="Google Calendar Logo" loading="lazy">
+                <span>Google Calendar</span>
+              </div>
+              <div class="tech-chip" title="Google Forms">
+                <img src="assets/logos/googleforms.svg" alt="Google Forms Logo" loading="lazy">
+                <span>Google Forms</span>
+              </div>
+              <div class="tech-chip" title="Grammarly">
+                <img src="assets/logos/grammarly.svg" alt="Grammarly Logo" loading="lazy">
+                <span>Grammarly</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. ANALYTICS, TOOLS & COMMS -->
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+            <div class="category-header-pill">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 text-[#3B6991]"></i>
+              <span>Analytics &amp; Workflows</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3.5">
+              <div class="tech-chip" title="Power BI">
+                <img src="assets/logos/powerbi.svg" alt="Power BI Logo" loading="lazy">
+                <span>Power BI</span>
+              </div>
+              <div class="tech-chip" title="GitHub">
+                <img src="assets/logos/github.svg" alt="GitHub Logo" loading="lazy">
+                <span>GitHub</span>
+              </div>
+              <div class="tech-chip" title="CRM's">
+                <img src="assets/logos/crm.svg" alt="CRM Salesforce Logo" loading="lazy">
+                <span>CRM's</span>
+              </div>
+              <div class="tech-chip" title="ZOOM">
+                <img src="assets/logos/zoom.svg" alt="ZOOM Logo" loading="lazy">
+                <span>ZOOM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. CONTACT SECTION                                                        -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="section-target pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-[#E2DDD5]/70">
+      <div class="w-full max-w-[1560px] mx-auto space-y-6 sm:space-y-7">
+
+        <!-- HEADER STRIP -->
+        <div class="pb-4 border-b border-[#E2DDD5]/80">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+            Get in Touch
+          </h2>
+        </div>
+
+        <!-- MAIN MODERN 2-COLUMN CONSOLE -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
+
+          <!-- LEFT COLUMN: INTERACTIVE CONNECT CHANNELS (5 COLS) -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-5">
+
+            <!-- 1. Quick Direct Channels Card -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] space-y-4">
+              <div class="pb-3 border-b border-[#F1EFEA]">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#1E3A5F] flex items-center gap-1.5">
+                  <i data-lucide="radio" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                  Direct Channels
+                </span>
+              </div>
+
+              <!-- Email Hero Pill with Copy -->
+              <div class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-[#FAF8F5] to-white border border-[#E8E2D8] hover:border-[#3B6991] p-3.5 transition-all duration-300 hover:shadow-md">
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-xl bg-[#F0F4F8] border border-[#D5E3EF] text-[#1E3A5F] flex items-center justify-center shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <i data-lucide="mail" class="w-5 h-5 text-[#3B6991]"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="text-[11px] font-semibold uppercase tracking-wider text-[#64748B] block">Email Inquiries</span>
+                      <span id="email-text" class="text-sm sm:text-[15px] font-bold text-[#0F172A] truncate block select-all">
+                        rjlabus44@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <button id="copy-email-btn" type="button" title="Copy email address" class="p-2.5 rounded-lg bg-white border border-[#E2DDD5] text-[#475569] hover:text-[#0F172A] hover:bg-[#F3EFE8] transition-all shadow-sm flex-shrink-0 active:scale-95">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mobile Phone Numbers Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a href="tel:09956124450" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#2563EB] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-blue-50 text-[#2563EB] border border-blue-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <i data-lucide="phone" class="w-4 h-4"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="text-xs font-bold text-[#0F172A] block truncate">0995 612 4450</span>
+                      <span class="text-[10px] font-semibold text-[#2563EB] block">Globe Mobile</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#2563EB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                </a>
+
+                <a href="tel:09631240204" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#16A34A] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#16A34A] border border-emerald-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="text-xs font-bold text-[#0F172A] block truncate">0963 124 0204</span>
+                      <span class="text-[10px] font-semibold text-[#16A34A] block">Smart Mobile</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#16A34A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                </a>
+              </div>
+
+              <!-- Social Media & Location Rows -->
+              <div class="space-y-2 pt-1">
+                <!-- Facebook Profile -->
+                <a href="https://www.facebook.com/demlabus" target="_blank" rel="noopener noreferrer" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#1877F2] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm" title="Open Roland James Labus on Facebook">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <img src="assets/logos/facebook.svg" alt="Facebook Official Logo" class="w-8 h-8 object-contain flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div class="min-w-0">
+                      <span class="text-xs font-bold text-[#0F172A] block truncate">facebook.com/demlabus</span>
+                      <span class="text-[10px] text-[#64748B]">Personal Facebook Profile &bull; Click to open</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#1877F2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                </a>
+
+                <!-- Location & Reference Split Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                  <!-- Location (Searchable in Google Maps) -->
+                  <a href="https://www.google.com/maps/search/?api=1&query=Km+12+Catalunan+Pequeno+Davao+City+Philippines" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#C87D6B] hover:bg-white transition-all duration-200 flex items-start justify-between group shadow-sm" title="Search on Google Maps">
+                    <div class="flex items-start gap-2.5 min-w-0">
+                      <div class="w-7 h-7 rounded-lg bg-orange-50 text-[#C87D6B] border border-orange-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                      </div>
+                      <div class="min-w-0">
+                        <span class="text-[10px] font-bold text-[#64748B] uppercase tracking-wider block">Location</span>
+                        <span class="text-xs font-bold text-[#0F172A] block leading-tight">Catalunan Peque&ntilde;o, Davao City</span>
+                        <span class="text-[10px] font-semibold text-[#C87D6B] block mt-0.5">Philippines &bull; Maps</span>
+                      </div>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-[#C87D6B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0"></i>
+                  </a>
+
+                  <!-- Reference -->
+                  <div class="p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] flex items-start gap-2.5 shadow-sm">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-50 text-[#3B6991] border border-indigo-100 flex items-center justify-center flex-shrink-0">
+                      <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="text-[10px] font-bold text-[#64748B] uppercase tracking-wider block">Reference</span>
+                      <span class="text-xs font-bold text-[#0F172A] block leading-tight truncate">Ernesto Reyes Jr.</span>
+                      <a href="tel:09532137058" class="text-[11px] font-semibold text-[#3B6991] hover:underline block mt-0.5">0953 213 7058</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Profile Badges Strip -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex flex-wrap items-center gap-3.5">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#3B6991]"></span>
+                  <span class="text-sm font-bold text-[#0F172A]">Filipino &bull; Single</span>
+                </div>
+                <span class="hidden sm:inline text-[#CBD5E1] font-bold">&bull;</span>
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">English</span>
+                  <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">Filipino</span>
+                  <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">Cebuano</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold px-3.5 py-1.5 rounded-lg bg-[#EAF2F8] text-[#1E3A5F] border border-[#D5E3EF] whitespace-nowrap self-start sm:self-auto shadow-2xs">
+                GMT+8 Philippine Time
+              </span>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: MODERN INTERACTIVE MESSAGE CONSOLE (7 COLS) -->
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full flex flex-col justify-between space-y-6">
+              <div class="space-y-5">
+                <div class="pb-3.5 border-b border-[#F1EFEA]">
+                  <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight">
+                    Send a Direct Message
+                  </h3>
+                  <p class="text-xs sm:text-sm text-[#64748B] mt-0.5">
+                    Messages dispatch straight to Roland's primary inbox (<span class="font-semibold text-[#0F172A]">rjlabus44@gmail.com</span>)
+                  </p>
+                </div>
+
+                <form id="contact-form" class="space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1.5">
+                      <label for="name" class="text-xs font-bold text-[#1E293B] block">Your Name</label>
+                      <input type="text" id="name" required placeholder="Enter Name" 
+                             class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                    </div>
+                    <div class="space-y-1.5">
+                      <label for="email" class="text-xs font-bold text-[#1E293B] block">Your Email</label>
+                      <input type="email" id="email" required placeholder="sarah@company.com" 
+                             class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                    </div>
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <label for="subject" class="text-xs font-bold text-[#1E293B] block">Subject / Purpose</label>
+                    <input type="text" id="subject" required placeholder="Software Architecture Inquiry / Project Consultation" 
+                           class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <label for="message" class="text-xs font-bold text-[#1E293B] block">Message Details</label>
+                    <textarea id="message" rows="4" required placeholder="Hi Roland, I'm reaching out regarding a project / software engineering leadership role..." 
+                              class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm resize-none"></textarea>
+                  </div>
+
+                  <div class="pt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <button type="submit" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#0F172A] hover:bg-[#3B6991] text-white text-sm font-bold tracking-wide transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 group">
+                      <span>Send Message</span>
+                      <i data-lucide="arrow-right" class="w-4 h-4 text-[#CBD5E1] group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+
+                    <span class="text-xs text-[#64748B] flex items-center gap-1.5">
+                      <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                      Direct email dispatch guaranteed
+                    </span>
+                  </div>
+                </form>
+
+                <!-- Success Alert Message -->
+                <div id="form-success" class="hidden p-4 rounded-xl bg-[#EAF5ED] border border-[#D1E8D7] text-sm text-[#2E6F40] flex items-center gap-2.5 animate-fadeIn">
+                  <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
+                  <span>Thank you! Your mail client will open with your pre-filled inquiry to send directly.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full py-8 border-t border-[#E2DDD5]/80 bg-[#FAF8F5] text-center text-xs text-[#64748B] font-mono">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span>Roland James D. Labus &bull; Software Development Manager</span>
+      <span>Davao City, Philippines &bull; Portfolio 2026</span>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING COPY TOAST ==================== -->
+  <div id="copy-toast" class="fixed bottom-6 right-6 pointer-events-none opacity-0 translate-y-2 z-50 px-4 py-2 rounded-xl bg-[#1F2A37] text-white text-xs font-mono font-medium shadow-elevated flex items-center gap-2 transition-all duration-300">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <!-- ==================== INTERACTIVE SCRIPTS ==================== -->
+  <script>
+    // 1. Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 2. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown and smoothly navigate directly to target section header
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            mobileMenu.classList.add('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+              icon.setAttribute('data-lucide', 'menu');
+              lucide.createIcons();
+            }
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, '', href);
+            return;
+          }
+        }
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+
+    // 3. Brand Name White Shine Effect on Click
+    const brandBtn = document.getElementById('brand-name-btn');
+    if (brandBtn) {
+      brandBtn.addEventListener('click', () => {
+        brandBtn.classList.remove('shine-active');
+        void brandBtn.offsetWidth;
+        brandBtn.classList.add('shine-active');
+        setTimeout(() => {
+          brandBtn.classList.remove('shine-active');
+        }, 750);
+      });
+    }
+
+    // 4. Toggle Older Experiences (Latest 3 vs Full 8)
+    const toggleExpBtn = document.getElementById('toggle-exp-btn');
+    const moreExperiences = document.getElementById('more-experiences');
+    const toggleExpText = document.getElementById('toggle-exp-text');
+    const toggleExpIcon = document.getElementById('toggle-exp-icon');
+
+    if (toggleExpBtn && moreExperiences) {
+      toggleExpBtn.addEventListener('click', () => {
+        const isHidden = moreExperiences.classList.toggle('hidden');
+        const isExpanded = !isHidden;
+
+        toggleExpBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        
+        if (isExpanded) {
+          toggleExpText.textContent = 'Collapse to Latest 3';
+          if (toggleExpIcon) {
+            toggleExpIcon.classList.add('rotate-180');
+          }
+          const badge = toggleExpBtn.querySelector('span:nth-child(2)');
+          if (badge) badge.classList.add('hidden');
+        } else {
+          toggleExpText.textContent = 'View All Experiences';
+          if (toggleExpIcon) {
+            toggleExpIcon.classList.remove('rotate-180');
+          }
+          const badge = toggleExpBtn.querySelector('span:nth-child(2)');
+          if (badge) badge.classList.remove('hidden');
+
+          toggleExpBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    // 5. One-Click Copy Email to Clipboard
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('copy-toast');
+    const emailStr = 'rjlabus44@gmail.com';
+
+    if (copyBtn && toast) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(emailStr);
+          toast.classList.remove('opacity-0', 'translate-y-2');
+          toast.classList.add('opacity-100', 'translate-y-0');
+          setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-2');
+          }, 2200);
+        } catch (err) {
+          window.location.href = `mailto:${emailStr}`;
+        }
+      });
+    }
+
+    // 6. Contact Form Submission (Mailto Handler)
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameVal = document.getElementById('name').value.trim();
+        const emailVal = document.getElementById('email').value.trim();
+        const subjectVal = document.getElementById('subject').value.trim();
+        const messageVal = document.getElementById('message').value.trim();
+
+        const fullSubject = encodeURIComponent(`[Portfolio Inquiry] ${subjectVal}`);
+        const fullBody = encodeURIComponent(
+          `Hello Roland,\n\nName: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}\n\n---\nSent via Roland James Labus Portfolio`
+        );
+
+        window.location.href = `mailto:rjlabus44@gmail.com?subject=${fullSubject}&body=${fullBody}`;
+
+        if (formSuccess) {
+          formSuccess.classList.remove('hidden');
+          setTimeout(() => {
+            formSuccess.classList.add('hidden');
+          }, 6000);
+        }
+      });
+    }
+
+    // =========================================================================
+    // 7. SCROLL SPY & NAVBAR ACTIVE INDICATOR ENGINE
+    // =========================================================================
+    const sections = document.querySelectorAll('section[id]');
+    const desktopSpyLinks = document.querySelectorAll('.nav-spy-link');
+    const mobileSpyLinks = document.querySelectorAll('.mobile-nav-link');
+
+    const activeDesktopClasses = ['text-white', 'bg-navy', 'shadow-subtle', 'font-semibold'];
+    const inactiveDesktopClasses = ['text-navy-muted', 'hover:text-navy', 'hover:bg-[#F3EFE8]/70', 'font-medium'];
+
+    const activeMobileClasses = ['font-bold', 'text-navy', 'bg-white', 'border-2', 'border-navy', 'shadow-sm'];
+    const inactiveMobileClasses = ['font-medium', 'text-navy-muted', 'bg-white', 'border', 'border-line', 'hover:text-navy', 'hover:border-navy/40'];
+
+    function updateActiveNavbar(currentId) {
+      // Desktop Navbar Indicator
+      desktopSpyLinks.forEach(link => {
+        const target = link.getAttribute('data-section');
+        if (target === currentId) {
+          link.classList.remove(...inactiveDesktopClasses);
+          link.classList.add(...activeDesktopClasses);
+        } else {
+          link.classList.remove(...activeDesktopClasses);
+          link.classList.add(...inactiveDesktopClasses);
+        }
+      });
+
+      // Mobile Navbar Indicator (Light Theme with Outline Indicator)
+      mobileSpyLinks.forEach(link => {
+        const target = link.getAttribute('data-section');
+        const dot = link.querySelector('.active-dot');
+        const icon = link.querySelector('i');
+
+        if (target === currentId) {
+          link.classList.remove(...inactiveMobileClasses);
+          link.classList.add(...activeMobileClasses);
+          if (dot) dot.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('text-navy-subtle');
+            icon.classList.add('text-navy');
+          }
+        } else {
+          link.classList.remove(...activeMobileClasses);
+          link.classList.add(...inactiveMobileClasses);
+          if (dot) dot.classList.add('hidden');
+          if (icon) {
+            icon.classList.remove('text-navy');
+            icon.classList.add('text-navy-subtle');
+          }
+        }
+      });
+    }
+
+    // Scroll Observer
+    const observerOptions = {
+      root: null,
+      rootMargin: '-25% 0px -55% 0px',
+      threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateActiveNavbar(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+
+    // Window scroll fallback to guarantee Home at top and Contact at bottom
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+
+      if (scrollPos < 120) {
+        updateActiveNavbar('home');
+      } else if (scrollPos + winHeight >= docHeight - 80) {
+        updateActiveNavbar('contact');
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

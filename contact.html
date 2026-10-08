@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Coordinates — Roland James Labus | Software Development Manager</title>
+  <meta name="description" content="Direct contact console and communication coordinates for Roland James Labus, Software Development Manager and Systems Analyst.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Outfit (Display Logo), Inter (Body), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 4px 20px -2px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 12px 30px -4px rgba(31, 42, 55, 0.08), 0 4px 12px -2px rgba(31, 42, 55, 0.03)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+
+    /* Custom smooth page scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Copy notification badge */
+    #copy-toast {
+      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="index.html" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer group" title="Portfolio">
+          <span class="silver-shine font-display font-black text-xl sm:text-2xl tracking-[-0.03em] text-[#0F172A]">
+            Portfolio
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Cute & Clean Editorial Pill with Contact active) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="index.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="about.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="experience.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="projects.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="skills.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="contact.html" class="nav-link inline-flex items-center justify-center px-5 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Direct Inquiry Trigger -->
+          <a href="contact.html" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Light Ivory Theme with clean outline styling matching Desktop) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-line bg-[#FBF9F5]/98 backdrop-blur-md shadow-xl px-5 pt-3 pb-5 space-y-1.5">
+      <a href="index.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white/70 border border-line/80 hover:text-navy hover:bg-white hover:border-line transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white/70 border border-line/80 hover:text-navy hover:bg-white hover:border-line transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>About</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="experience.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white/70 border border-line/80 hover:text-navy hover:bg-white hover:border-line transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Experience</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white/70 border border-line/80 hover:text-navy hover:bg-white hover:border-line transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Projects</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="skills.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white/70 border border-line/80 hover:text-navy hover:bg-white hover:border-line transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Skills</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-navy bg-white border-2 border-navy shadow-sm transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-navy"></span>
+          <span>Contact</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>  <!-- ==================== MAIN CONTACT CONSOLE (PREMIUM MODERN DESIGN) ==================== -->
+  <main class="flex-1 w-full relative z-10 pt-24 sm:pt-28 pb-10 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 flex flex-col justify-start">
+    <div class="w-full max-w-[1560px] mx-auto hero-animate space-y-7">
+
+      <!-- ==================== HEADER STRIP (Modern & Minimal) ==================== -->
+      <section class="pb-4 border-b border-[#E2DDD5]/80">
+        <h1 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+          Get in Touch
+        </h1>
+      </section>
+
+      <!-- ==================== MAIN MODERN 2-COLUMN CONSOLE ==================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
+
+        <!-- LEFT COLUMN: INTERACTIVE CONNECT CHANNELS (5 COLS) -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-5">
+
+          <!-- 1. Quick Direct Channels Card -->
+          <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] space-y-4">
+            <div class="pb-3 border-b border-[#F1EFEA]">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#1E3A5F] flex items-center gap-1.5">
+                <i data-lucide="radio" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Direct Channels
+              </span>
+            </div>
+
+            <!-- Email Hero Pill with Copy -->
+            <div class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-[#FAF8F5] to-white border border-[#E8E2D8] hover:border-[#3B6991] p-3.5 transition-all duration-300 hover:shadow-md">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3 min-w-0">
+                  <div class="w-10 h-10 rounded-xl bg-[#F0F4F8] border border-[#D5E3EF] text-[#1E3A5F] flex items-center justify-center shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i data-lucide="mail" class="w-5 h-5 text-[#3B6991]"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-[11px] font-semibold uppercase tracking-wider text-[#64748B] block">Email Inquiries</span>
+                    <span id="email-text" class="text-sm sm:text-[15px] font-bold text-[#0F172A] truncate block select-all">
+                      rjlabus44@gmail.com
+                    </span>
+                  </div>
+                </div>
+                <button id="copy-email-btn" type="button" title="Copy email address" class="p-2.5 rounded-lg bg-white border border-[#E2DDD5] text-[#475569] hover:text-[#0F172A] hover:bg-[#F3EFE8] transition-all shadow-sm flex-shrink-0 active:scale-95">
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mobile Phone Numbers Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <!-- Globe -->
+              <a href="tel:09956124450" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#2563EB] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <div class="w-8 h-8 rounded-lg bg-blue-50 text-[#2563EB] border border-blue-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-xs font-bold text-[#0F172A] block truncate">0995 612 4450</span>
+                    <span class="text-[10px] font-semibold text-[#2563EB] block">Globe Mobile</span>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#2563EB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </a>
+
+              <!-- Smart -->
+              <a href="tel:09631240204" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#16A34A] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#16A34A] border border-emerald-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-xs font-bold text-[#0F172A] block truncate">0963 124 0204</span>
+                    <span class="text-[10px] font-semibold text-[#16A34A] block">Smart Mobile</span>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#16A34A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </a>
+            </div>
+
+            <!-- Social Media & Location Rows -->
+            <div class="space-y-2 pt-1">
+              <!-- Facebook Profile with Official Circular SVG Logo -->
+              <a href="https://www.facebook.com/demlabus" target="_blank" rel="noopener noreferrer" class="group p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#1877F2] hover:bg-white transition-all duration-200 flex items-center justify-between shadow-sm" title="Open Roland James Labus on Facebook">
+                <div class="flex items-center gap-3 min-w-0">
+                  <img src="assets/logos/facebook.svg" alt="Facebook Official Logo" class="w-8 h-8 object-contain flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div class="min-w-0">
+                    <span class="text-xs font-bold text-[#0F172A] block truncate">facebook.com/demlabus</span>
+                    <span class="text-[10px] text-[#64748B]">Personal Facebook Profile &bull; Click to open</span>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#94A3B8] group-hover:text-[#1877F2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </a>
+
+              <!-- Location & Reference Split Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                <!-- Location (Directly Searchable in Google Maps with Philippines) -->
+                <a href="https://www.google.com/maps/search/?api=1&query=Km+12+Catalunan+Pequeno+Davao+City+Philippines" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] hover:border-[#C87D6B] hover:bg-white transition-all duration-200 flex items-start justify-between group shadow-sm" title="Search on Google Maps">
+                  <div class="flex items-start gap-2.5 min-w-0">
+                    <div class="w-7 h-7 rounded-lg bg-orange-50 text-[#C87D6B] border border-orange-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="text-[10px] font-bold text-[#64748B] uppercase tracking-wider block">Location</span>
+                      <span class="text-xs font-bold text-[#0F172A] block leading-tight">Catalunan Peque&ntilde;o, Davao City</span>
+                      <span class="text-[10px] font-semibold text-[#C87D6B] block mt-0.5">Philippines &bull; Maps</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-[#C87D6B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0"></i>
+                </a>
+
+                <!-- Reference -->
+                <div class="p-3 rounded-xl bg-[#FAF8F5] border border-[#E8E2D8] flex items-start gap-2.5 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-indigo-50 text-[#3B6991] border border-indigo-100 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <span class="text-[10px] font-bold text-[#64748B] uppercase tracking-wider block">Reference</span>
+                    <span class="text-xs font-bold text-[#0F172A] block leading-tight truncate">Ernesto Reyes Jr.</span>
+                    <a href="tel:09532137058" class="text-[11px] font-semibold text-[#3B6991] hover:underline block mt-0.5">0953 213 7058</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Profile Badges Strip (Expanded to match right column height perfectly) -->
+          <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center gap-3.5">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#3B6991]"></span>
+                <span class="text-sm font-bold text-[#0F172A]">Filipino &bull; Single</span>
+              </div>
+              <span class="hidden sm:inline text-[#CBD5E1] font-bold">&bull;</span>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">English</span>
+                <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">Filipino</span>
+                <span class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-xs font-semibold text-[#1E293B] shadow-2xs">Cebuano</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold px-3.5 py-1.5 rounded-lg bg-[#EAF2F8] text-[#1E3A5F] border border-[#D5E3EF] whitespace-nowrap self-start sm:self-auto shadow-2xs">
+              GMT+8 Philippine Time
+            </span>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: MODERN INTERACTIVE MESSAGE CONSOLE (7 COLS) -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full flex flex-col justify-between space-y-6">
+            <div class="space-y-5">
+              <div class="pb-3.5 border-b border-[#F1EFEA]">
+                <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight">
+                  Send a Direct Message
+                </h2>
+                <p class="text-xs sm:text-sm text-[#64748B] mt-0.5">
+                  Messages dispatch straight to Roland's primary inbox (<span class="font-semibold text-[#0F172A]">rjlabus44@gmail.com</span>)
+                </p>
+              </div>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="name" class="text-xs font-bold text-[#1E293B] block">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter Name" 
+                           class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="email" class="text-xs font-bold text-[#1E293B] block">Your Email</label>
+                    <input type="email" id="email" required placeholder="sarah@company.com" 
+                           class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                  </div>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="subject" class="text-xs font-bold text-[#1E293B] block">Subject / Purpose</label>
+                  <input type="text" id="subject" required placeholder="Software Architecture Inquiry / Project Consultation" 
+                         class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm">
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="message" class="text-xs font-bold text-[#1E293B] block">Message Details</label>
+                  <textarea id="message" rows="4" required placeholder="Hi Roland, I'm reaching out regarding a project / software engineering leadership role..." 
+                            class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#E5E1D8] text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:border-[#3B6991] focus:ring-2 focus:ring-[#3B6991]/15 focus:bg-white transition-all shadow-sm resize-none"></textarea>
+                </div>
+
+                <div class="pt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <button type="submit" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#0F172A] hover:bg-[#3B6991] text-white text-sm font-bold tracking-wide transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 group">
+                    <span>Send Message</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#CBD5E1] group-hover:translate-x-1 transition-transform"></i>
+                  </button>
+
+                  <span class="text-xs text-[#64748B] flex items-center gap-1.5">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                    Direct email dispatch guaranteed
+                  </span>
+                </div>
+              </form>
+
+              <!-- Success Alert Message -->
+              <div id="form-success" class="hidden p-4 rounded-xl bg-[#EAF5ED] border border-[#D1E8D7] text-sm text-[#2E6F40] flex items-center gap-2.5 animate-fadeIn">
+                <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
+                <span>Thank you! Your mail client will open with your pre-filled inquiry to send directly.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== FLOATING COPY TOAST ==================== -->
+  <div id="copy-toast" class="fixed bottom-6 right-6 pointer-events-none opacity-0 translate-y-2 z-50 px-4 py-2 rounded-xl bg-[#1F2A37] text-white text-xs font-mono font-medium shadow-elevated flex items-center gap-2">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Copy Email to Clipboard
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('copy-toast');
+    const emailStr = 'rjlabus44@gmail.com';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(emailStr);
+        toast.classList.remove('opacity-0', 'translate-y-2');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-2');
+        }, 2200);
+      } catch (err) {
+        prompt('Copy email:', emailStr);
+      }
+    });
+
+    // Simple Form Submission redirect to mailto
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      successMsg.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = `mailto:rjlabus44@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + "\n\n" + message)}`;
+      }, 800);
+    });
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown when a link is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

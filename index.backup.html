@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roland James Labus — Software Development Manager</title>
+  <meta name="description" content="Portfolio of Roland James Labus — Software Development Manager at SIBS International Business Solutions.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Inter & Sora (Body/Accents), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 8px 24px -4px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 14px 34px -4px rgba(31, 42, 55, 0.07)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Refined entrance animation */
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Controlled star sparkle */
+    @keyframes ambientTwinkle {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    .twinkle-star {
+      animation: ambientTwinkle 4.5s ease-in-out infinite;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen lg:h-screen lg:overflow-hidden flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="w-full relative z-50 shrink-0">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-5 sm:py-6">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="#home" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer" title="Roland James Labus">
+          <span class="silver-shine font-heading font-extrabold text-lg sm:text-xl tracking-tight">
+            Roland James Labus
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Cute & Clean Editorial Pill) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="index.html" class="nav-link inline-flex items-center justify-center px-5 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="about.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="experience.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="projects.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="skills.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="contact.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Direct Inquiry Trigger -->
+          <a href="contact.html" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Solid Opaque Overlay so nothing behind shows through) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-[#E2DDD5] bg-[#FBF9F5] shadow-elevated px-6 pt-3 pb-6 space-y-1.5">
+      <a href="index.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold text-navy bg-white border border-line">
+        <span>Home</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-navy-muted hover:text-navy hover:bg-white/60">
+        <span>About</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="experience.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-navy-muted hover:text-navy hover:bg-white/60">
+        <span>Experience</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-navy-muted hover:text-navy hover:bg-white/60">
+        <span>Projects</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="skills.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-navy-muted hover:text-navy hover:bg-white/60">
+        <span>Skills</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-navy-muted hover:text-navy hover:bg-white/60">
+        <span>Contact</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS (Delicate & Minimalist) ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    
+    <!-- Top-Left Corner: Dainty 4-point star sparkle -->
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+
+    <!-- Bottom-Left Corner: Dainty loop flourish -->
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+
+    <!-- Top-Right: Dainty spark cluster -->
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+
+    <!-- Bottom-Right: Hand-drawn subtle code tag -->
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>
+
+  <!-- ==================== HOME / HERO SECTION ==================== -->
+  <main class="flex-1 w-full flex items-center justify-center relative z-10 px-6 sm:px-10 lg:px-16 -mt-4 sm:-mt-8">
+    <section id="home" class="w-full max-w-[1380px] mx-auto hero-animate">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-5 md:gap-10 lg:gap-14 xl:gap-20 items-center justify-center">
+
+        <!-- ==================== PICTURE & MOBILE INTRO (Top on mobile, Right on tablet/desktop) ==================== -->
+        <div class="order-1 md:order-2 md:col-span-5 flex flex-col items-center justify-center pt-1 md:pt-0 gap-2.5 sm:gap-3">
+          
+          <!-- Cute + Editorial Introductor Badge (Visible on Mobile only above picture) -->
+          <div class="md:hidden inline-flex items-center gap-2 px-3.5 py-1 rounded-lg bg-white border border-line text-[11px] sm:text-xs font-mono tracking-wider text-navy uppercase shadow-subtle w-fit">
+            <span class="w-2 h-2 rounded-full bg-peach"></span>
+            <span>HELLO, WORLD &mdash; I'M</span>
+            <span class="text-sage font-mono text-xs">✦</span>
+          </div>
+
+          <!-- Centered Picture Card with clean editorial frame -->
+          <div class="relative flex items-center justify-center w-full">
+            <!-- Subtle editorial corner stars & details -->
+            <div class="absolute -top-2 right-8 sm:right-12 text-peach font-mono text-base sm:text-lg twinkle-star select-none">✦</div>
+            <div class="absolute -bottom-2 left-8 sm:left-12 text-sage font-mono text-base sm:text-lg select-none">✦</div>
+            <div class="absolute top-1/2 -right-5 text-mutedblue/50 font-mono text-sm select-none hidden xl:block">✻</div>
+
+            <div class="relative w-full max-w-[190px] sm:max-w-[240px] md:max-w-[320px] lg:max-w-[380px] xl:max-w-[410px] p-2 sm:p-2.5 md:p-3 rounded-[22px] bg-white border border-line shadow-card select-none">
+              <img 
+                src="maam%20dems.png" 
+                alt="Roland James Labus — Portrait" 
+                class="w-full h-auto rounded-[16px] sm:rounded-[18px] select-none block pointer-events-none"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==================== EDITORIAL CONTENT (Bottom on mobile, Left on tablet/desktop) ==================== -->
+        <div class="order-2 md:order-1 md:col-span-7 space-y-4 sm:space-y-5 lg:space-y-7 xl:space-y-8 flex flex-col items-center text-center md:items-start md:text-left justify-center mt-1 sm:mt-2 md:mt-0">
+          
+          <!-- Cute + Editorial Introductor Badge (Visible on Desktop md+) -->
+          <div class="hidden md:inline-flex items-center gap-2.5 px-4 py-1.5 rounded-lg bg-white border border-line text-xs font-mono tracking-wider text-navy uppercase shadow-subtle w-fit">
+            <span class="w-2.5 h-2.5 rounded-full bg-peach"></span>
+            <span>HELLO, WORLD &mdash; I'M</span>
+            <span class="text-sage font-mono text-sm">✦</span>
+          </div>
+
+          <!-- Name & Title Hierarchy -->
+          <div class="space-y-2 sm:space-y-2.5">
+            <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] xl:text-[72px] text-navy tracking-tight leading-[1.08] select-none">
+              Roland James Labus
+            </h1>
+            
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+              <span class="font-heading font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-mutedblue tracking-tight">
+                Software Development Manager
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-mono px-3 py-1 rounded-lg bg-peach-light border border-peach/50 text-navy font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-peach"></span>
+                SIBS International
+              </span>
+            </div>
+          </div>
+
+          <!-- Editorial Lead Paragraph -->
+          <p class="text-navy-muted text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
+            A software and IT professional with experience in software development, system management, cloud hosting, database management, technical support, reporting, dashboards, system integrations, and project management.
+          </p>
+
+          <!-- Current Position Capsule Note -->
+          <div class="p-3.5 sm:p-4 lg:p-5 rounded-2xl bg-white border border-line shadow-card max-w-2xl flex items-start text-left gap-3.5 sm:gap-4">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-mutedblue-light flex items-center justify-center shrink-0 mt-0.5 text-mutedblue border border-mutedblue/20 shadow-subtle">
+              <i data-lucide="briefcase" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+            </div>
+            <p class="text-xs sm:text-sm lg:text-[15px] text-navy-muted leading-relaxed">
+              <strong class="text-navy font-semibold">Currently:</strong> Leading software development, infrastructure, and technology-driven operations at <span class="text-navy font-semibold underline decoration-mutedblue/50 underline-offset-4">SIBS International Business Solutions</span>.
+            </p>
+          </div>
+
+          <!-- Clean Rectangular CTA Buttons with Proper Spacing -->
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3.5 sm:gap-5 pt-1 sm:pt-2">
+            
+            <!-- Primary Button: Explore Experience -->
+            <a href="experience.html" class="inline-flex items-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-navy text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-mutedblue transition-all duration-200 shadow-card hover:shadow-elevated group">
+              <span>Explore Experience</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4 text-ivory/80 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform"></i>
+            </a>
+
+            <!-- Secondary Button: Get in Touch -->
+            <a href="contact.html" class="inline-flex items-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-white border border-navy/30 text-navy text-xs sm:text-sm font-semibold tracking-wide hover:border-navy hover:bg-ivory-subtle transition-all duration-200 shadow-subtle">
+              <i data-lucide="mail" class="w-4 h-4 text-mutedblue"></i>
+              <span>Get in Touch</span>
+            </a>
+
+            <!-- Editorial Hand-Drawn Arrow Annotation -->
+            <div class="hidden xl:flex items-center gap-3 pl-3 text-navy-subtle">
+              <svg class="w-6 h-6 text-peach transform -rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17l9.2-9.2M17 17V7H7" transform="rotate(180 12 12)"/>
+              </svg>
+              <span class="font-mono text-xs sm:text-[13px] text-navy-subtle tracking-tight">available for consultations</span>
+            </div>
+
+          </div>
+
+          <!-- Bottom Micro-Details: Clean Organized Editorial Dots -->
+          <div class="pt-2 sm:pt-3 flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6 text-xs sm:text-sm font-mono text-navy-subtle">
+            <span class="flex items-center gap-1.5 sm:gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sage"></i>
+              Davao City, Philippines
+            </span>
+            <span class="text-line">•</span>
+            <span class="flex items-center gap-1.5 sm:gap-2">
+              <span class="w-2 h-2 rounded-full bg-sage"></span>
+              Full Lifecycle Systems
+            </span>
+            <span class="text-line hidden sm:inline">•</span>
+            <span class="flex items-center gap-1.5 sm:gap-2">
+              <span class="text-peach">✦</span>
+              IT Leadership
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown when a link is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+
+    // Brand name white shine effect on click
+    const brandBtn = document.getElementById('brand-name-btn');
+    if (brandBtn) {
+      brandBtn.addEventListener('click', () => {
+        brandBtn.classList.remove('shine-active');
+        // Force reflow to re-trigger animation reliably
+        void brandBtn.offsetWidth;
+        brandBtn.classList.add('shine-active');
+        setTimeout(() => {
+          brandBtn.classList.remove('shine-active');
+        }, 750);
+      });
+    }
+  </script>
+</body>
+</html>

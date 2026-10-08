@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Roland James Labus | Software Development Manager</title>
+  <meta name="description" content="Featured software engineering projects, system architectures, web applications, and enterprise platforms delivered by Roland James Labus.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Outfit (Display Logo), Inter (Body), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 4px 20px -2px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 12px 30px -4px rgba(31, 42, 55, 0.08), 0 4px 12px -2px rgba(31, 42, 55, 0.03)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Refined entrance animation */
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+
+    /* Custom smooth page scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Technology badge micro-interaction */
+    .tech-pill {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tech-pill:hover {
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 12px -2px rgba(59, 105, 145, 0.12);
+      border-color: #CBD5E1;
+      background-color: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="index.html" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer group" title="Portfolio">
+          <span class="silver-shine font-display font-black text-xl sm:text-2xl tracking-[-0.03em] text-[#0F172A]">
+            Portfolio
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Cute & Clean Editorial Pill with Projects active) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="index.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="about.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="experience.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="projects.html" class="nav-link inline-flex items-center justify-center px-5 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="skills.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="contact.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Direct Inquiry Trigger -->
+          <a href="contact.html" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Solid 100% Opaque Light Theme with Clean Outlines) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-line bg-[#FBF9F5] shadow-2xl px-5 pt-3 pb-5 space-y-2">
+      <a href="index.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>About</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="experience.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Experience</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-navy bg-white border-2 border-navy shadow-sm transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-navy"></span>
+          <span>Projects</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy"></i>
+      </a>
+      <a href="skills.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Skills</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Contact</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>
+
+  <!-- ==================== MAIN SCROLLABLE PROJECTS CONTENT ==================== -->
+  <main class="flex-1 w-full relative z-10 pt-24 sm:pt-28 pb-16 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div class="w-full max-w-[1560px] mx-auto hero-animate space-y-8">
+
+      <!-- ==================== HEADER STRIP (Clean & Professional) ==================== -->
+      <section class="pb-4 border-b border-[#E2DDD5]">
+        <h1 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+          Featured Projects
+        </h1>
+      </section>
+
+      <!-- ==================== PROJECTS GRID ==================== -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- 1. FEATURED: FALCULAN TWINS ONLINE REVIEW PLATFORM (WITH EXTERNAL LINK) -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="globe" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Live Production Portal
+              </span>
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#EAF5ED] text-[#2E6F40] border border-[#D1E8D7]">
+                Featured
+              </span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                Falculan Twins Review Center
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                Web Portal &bull; Cloud Hosting &bull; E-Learning Infrastructure
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Architected and delivered the comprehensive web-based platform for reviewees and academic instructors. Configured resilient cloud server infrastructure, administered student databases, and ensured strict security protocols and high availability during national exam cycles.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="cloud" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>Cloud Hosting</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="database" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>MySQL</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="code" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>PHP / Web</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="shield" class="w-3.5 h-3.5 text-[#E07A5F]"></i>
+                <span>Cloudflare</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <a href="https://falculantwins.com/" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1F2A37] text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-[#3B6991] transition-colors shadow-subtle group/btn">
+              <span>Visit falculantwins.com</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-[#CBD5E1] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+            </a>
+
+            <span class="text-xs font-mono text-[#64748B]">Active Domain</span>
+          </div>
+        </article>
+
+        <!-- 2. SECURE ANDROID VIDEO CONFERENCING APPLICATION -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Android Mobile Application
+              </span>
+              <span class="text-xs font-mono text-[#64748B]">Custom App</span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                Secure Video Conferencing App
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                Android Platform &bull; Zoom SDK Integration &bull; Multi-Security
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Designed and developed a specialized Android video conference application tailored for distance learning. Integrated meeting SDKs with multiple security features to prevent unauthorized stream recording, restricted screen captures, and managed protected meeting rooms.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                <span>Android Studio</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="video" class="w-3.5 h-3.5 text-[#2563EB]"></i>
+                <span>Zoom SDK</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="coffee" class="w-3.5 h-3.5 text-[#B45309]"></i>
+                <span>Java / Kotlin</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>Security Protocols</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+              <span>Multi-layer Protection</span>
+            </div>
+            <span class="text-xs font-mono text-[#64748B]">Falculan Twins Ecosystem</span>
+          </div>
+        </article>
+
+        <!-- 3. CCLOA INTERIM ECO-SYSTEM DATABASE -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="database" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Public Sector Database
+              </span>
+              <span class="text-xs font-mono text-[#64748B]">Gov Infrastructure</span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                CCLOA Interim Eco-System
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                Dept. of Agrarian Reform Region XI &bull; Land Ownership Registry
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Managed, audited, and maintained the Certificate of Land Ownership Award (CCLOA) regional database. Audited entries submitted by Field Validation Teams, generated critical recurring compliance reports, and ensured data integrity for agrarian beneficiaries.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="server" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>Database Administration</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                <span>Data Auditing</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-[#059669]"></i>
+                <span>Reporting Automation</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="network" class="w-3.5 h-3.5 text-[#6366F1]"></i>
+                <span>Field ICT Systems</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+              <span>High-Integrity Audit</span>
+            </div>
+            <span class="text-xs font-mono text-[#64748B]">Region XI Operations</span>
+          </div>
+        </article>
+
+        <!-- 4. SALES-TO-TRADE (STT) REPORTING ENGINE -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Commercial Analytics
+              </span>
+              <span class="text-xs font-mono text-[#64748B]">Enterprise Distribution</span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                Sales-to-Trade (STT) Reporting Pipeline
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                JS Unitrade Merchandise Inc. &bull; Mindanao Distribution
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Engineered data consolidation workflows for commercial sales distributors across Mindanao. Validated multi-party sales records, eliminated transactional discrepancies, and generated recurring executive summaries directly supporting revenue and quota KPI tracking.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-[#D97706]"></i>
+                <span>Power BI / Excel</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5 text-[#2563EB]"></i>
+                <span>Sales Systems</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="git-merge" class="w-3.5 h-3.5 text-[#7C3AED]"></i>
+                <span>Data Reconciliation</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="target" class="w-3.5 h-3.5 text-[#DC2626]"></i>
+                <span>KPI Analytics</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+              <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+              <span>High Precision Metrics</span>
+            </div>
+            <span class="text-xs font-mono text-[#64748B]">Commercial Logistics</span>
+          </div>
+        </article>
+
+        <!-- 5. SIBS INTERNAL OPERATIONAL SOFTWARE & DASHBOARDS -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Internal Enterprise Suite
+              </span>
+              <span class="text-xs font-mono text-[#64748B]">Current Architecture</span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                Internal Digital Solutions &amp; Reporting Suite
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                SIBS International Business Solutions &bull; Management Lead
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Direction and architectural oversight of internal operations software, executive dashboard reporting, system integrations, and continuous deployment workflows. Facilitates smooth cross-departmental data visibility and process automation.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="layers" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                <span>Full-Stack Systems</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="webhook" class="w-3.5 h-3.5 text-[#0284C7]"></i>
+                <span>REST APIs</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="database" class="w-3.5 h-3.5 text-[#0D9488]"></i>
+                <span>MySQL</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="git-branch" class="w-3.5 h-3.5 text-[#E11D48]"></i>
+                <span>CI/CD Deployment</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+              <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+              <span>Active Internal Suite</span>
+            </div>
+            <span class="text-xs font-mono text-[#64748B]">SIBS International</span>
+          </div>
+        </article>
+
+        <!-- 6. MULTI-CHANNEL E-COMMERCE CLIENT MARKETING & DIGITAL ASSETS -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-7 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF]">
+                <i data-lucide="palette" class="w-3.5 h-3.5 text-[#3B6991]"></i>
+                Digital Production
+              </span>
+              <span class="text-xs font-mono text-[#64748B]">Australian Accounts</span>
+            </div>
+
+            <div>
+              <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#3B6991] transition-colors">
+                E-Commerce Creative &amp; Infrastructure
+              </h2>
+              <p class="text-xs font-mono text-[#64748B] mt-1">
+                Eayana E-Commerce Concepts &bull; Global Client Deliverables
+              </p>
+            </div>
+
+            <p class="text-sm text-[#334155] leading-relaxed">
+              Produced digital marketing banners, clean advertising layouts, and branded commercial materials for Australian client businesses while administering workstation uptime and endpoint cybersecurity across team members.
+            </p>
+
+            <!-- Tech Badges with Icons -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="image" class="w-3.5 h-3.5 text-[#31A8FF]"></i>
+                <span>Adobe Photoshop</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="pen-tool" class="w-3.5 h-3.5 text-[#FF9A00]"></i>
+                <span>Illustrator</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#7D2AE8]"></i>
+                <span>Canva Pro</span>
+              </span>
+              <span class="tech-pill inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E8E2D8] text-[#1E293B] shadow-sm">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#2E6F40]"></i>
+                <span>Endpoint Security</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-[#F1EFEA] flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs font-mono text-[#334155]">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+              <span>Delivered Internationally</span>
+            </div>
+            <span class="text-xs font-mono text-[#64748B]">Australian Client Projects</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown when a link is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

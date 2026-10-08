@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills &amp; Technologies — Roland James Labus | Software Development Manager</title>
+  <meta name="description" content="Verified technical proficiencies, development IDEs, cloud infrastructure, CRM systems, multimedia tools, and productivity applications used by Roland James Labus.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Outfit (Display Logo), Inter (Body), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 4px 20px -2px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 12px 30px -4px rgba(31, 42, 55, 0.08), 0 4px 12px -2px rgba(31, 42, 55, 0.03)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+
+    /* Custom smooth page scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Interactive Tech Pill Chip Badge - Tama-tama lang (balanced, no overlap) */
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: #FFFFFF;
+      border: 1.5px solid #E2DDD5;
+      color: #1F2A37;
+      box-shadow: 0 1px 3px rgba(31, 42, 55, 0.04);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .tech-chip:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 18px -3px rgba(31, 42, 55, 0.1), 0 3px 6px -1px rgba(31, 42, 55, 0.04);
+      border-color: #3B6991;
+      background: #FFFFFF;
+    }
+    .tech-chip:hover img {
+      transform: scale(1.1) rotate(2deg);
+    }
+    .tech-chip img {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Category Header Pill - Clean & Balanced */
+    .category-header-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.75rem;
+      background: rgba(234, 242, 248, 0.88);
+      border: 1px solid rgba(213, 227, 239, 0.95);
+      color: #1E3A5F;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .category-header-pill svg,
+    .category-header-pill i {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="index.html" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer group" title="Portfolio">
+          <span class="silver-shine font-display font-black text-xl sm:text-2xl tracking-[-0.03em] text-[#0F172A]">
+            Portfolio
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Cute & Clean Editorial Pill with Skills active) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="index.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="about.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="experience.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="projects.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="skills.html" class="nav-link inline-flex items-center justify-center px-5 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="contact.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Solid Opaque Overlay) -->
+    <!-- Mobile Dropdown Navigation (Solid 100% Opaque Light Theme with Clean Outlines) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-line bg-[#FBF9F5] shadow-2xl px-5 pt-3 pb-5 space-y-2">
+      <a href="index.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>About</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="experience.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Experience</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Projects</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="skills.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-navy bg-white border-2 border-navy shadow-sm transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-navy"></span>
+          <span>Skills</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Contact</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>
+
+  <!-- ==================== MAIN SKILLS CONTENT (6-CARD REFERENCE-STYLE GRID) ==================== -->
+  <main class="flex-1 w-full relative z-10 pt-24 sm:pt-28 pb-10 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div class="w-full max-w-[1560px] mx-auto hero-animate space-y-6">
+
+      <!-- ==================== HEADER STRIP (Clean & Professional) ==================== -->
+      <section class="pb-4 border-b border-[#E2DDD5]">
+        <h1 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+          Tools &amp; Software Used
+        </h1>
+      </section>
+
+      <!-- ==================== 6 CATEGORY CONTAINERS (BIGGER, HIGH-QUALITY & INTERACTIVE) ==================== -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+
+        <!-- 1. FRONTEND & WEB TECHNOLOGIES -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="code" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>Frontend &amp; Web</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- Bootstrap -->
+            <div class="tech-chip" title="Bootstrap">
+              <img src="assets/logos/bootstrap.svg" alt="Bootstrap Logo" loading="lazy">
+              <span>Bootstrap</span>
+            </div>
+
+            <!-- jQuery -->
+            <div class="tech-chip" title="jQuery">
+              <img src="assets/logos/jquery.svg" alt="jQuery Logo" loading="lazy">
+              <span>jQuery</span>
+            </div>
+
+            <!-- HTML5 -->
+            <div class="tech-chip" title="HTML5">
+              <img src="assets/logos/html5.svg" alt="HTML5 Logo" loading="lazy">
+              <span>HTML5</span>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="tech-chip" title="CSS3">
+              <img src="assets/logos/css3.svg" alt="CSS3 Logo" loading="lazy">
+              <span>CSS3</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="tech-chip" title="JavaScript">
+              <img src="assets/logos/javascript.svg" alt="JavaScript Logo" loading="lazy">
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DEVELOPMENT IDES & APIS -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="terminal" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>IDEs &amp; Environments</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- Android Studio -->
+            <div class="tech-chip" title="Android Studio">
+              <img src="assets/logos/androidstudio.svg" alt="Android Studio Logo" loading="lazy">
+              <span>Android Studio</span>
+            </div>
+
+            <!-- Visual Studio -->
+            <div class="tech-chip" title="Visual Studio">
+              <img src="assets/logos/visualstudio.svg" alt="Visual Studio Logo" loading="lazy">
+              <span>Visual Studio</span>
+            </div>
+
+            <!-- Eclipse IDE -->
+            <div class="tech-chip" title="Eclipse IDE">
+              <img src="assets/logos/eclipse.svg" alt="Eclipse IDE Logo" loading="lazy">
+              <span>Eclipse IDE</span>
+            </div>
+
+            <!-- Zoom SDK -->
+            <div class="tech-chip" title="Zoom SDK">
+              <img src="assets/logos/zoom.svg" alt="Zoom SDK Logo" loading="lazy">
+              <span>Zoom SDK</span>
+            </div>
+
+            <!-- REST APIs -->
+            <div class="tech-chip" title="REST APIs">
+              <img src="assets/logos/api.svg" alt="REST APIs Logo" loading="lazy">
+              <span>API'S</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. DATABASE & CLOUD HOSTING -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="database" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>Database &amp; Cloud</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- MySQL -->
+            <div class="tech-chip" title="MySQL">
+              <img src="assets/logos/mysql.svg" alt="MySQL Logo" loading="lazy">
+              <span>MySQL</span>
+            </div>
+
+            <!-- Cloudflare -->
+            <div class="tech-chip" title="Cloudflare">
+              <img src="assets/logos/cloudflare.svg" alt="Cloudflare Logo" loading="lazy">
+              <span>Cloudflare</span>
+            </div>
+
+            <!-- Hostinger -->
+            <div class="tech-chip" title="Hostinger">
+              <img src="assets/logos/hostinger.svg" alt="Hostinger Logo" loading="lazy">
+              <span>Hostinger</span>
+            </div>
+
+            <!-- WordPress -->
+            <div class="tech-chip" title="WordPress">
+              <img src="assets/logos/wordpress.svg" alt="WordPress Logo" loading="lazy">
+              <span>WordPress</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CREATIVE & MULTIMEDIA -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="palette" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>Creative &amp; Multimedia</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- Canva Pro -->
+            <div class="tech-chip" title="Canva Pro">
+              <img src="assets/logos/canva.svg" alt="Canva Pro Logo" loading="lazy">
+              <span>CANVA Pro</span>
+            </div>
+
+            <!-- Adobe Photoshop -->
+            <div class="tech-chip" title="Adobe Photoshop">
+              <img src="assets/logos/photoshop.svg" alt="Adobe Photoshop Logo" loading="lazy">
+              <span>Adobe Photoshop</span>
+            </div>
+
+            <!-- Adobe Illustrator -->
+            <div class="tech-chip" title="Adobe Illustrator">
+              <img src="assets/logos/illustrator.svg" alt="Adobe Illustrator Logo" loading="lazy">
+              <span>Adobe Illustrator</span>
+            </div>
+
+            <!-- Adobe After Effects -->
+            <div class="tech-chip" title="Adobe After Effects">
+              <img src="assets/logos/aftereffects.svg" alt="Adobe After Effects Logo" loading="lazy">
+              <span>After Effects</span>
+            </div>
+
+            <!-- CapCut -->
+            <div class="tech-chip" title="CapCut">
+              <img src="assets/logos/capcut.svg" alt="CapCut Logo" loading="lazy">
+              <span>CapCut</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. ENTERPRISE & PRODUCTIVITY -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="briefcase" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>Enterprise Productivity</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- Microsoft Office -->
+            <div class="tech-chip" title="Microsoft Office">
+              <img src="assets/logos/msoffice.svg" alt="Microsoft Office Logo" loading="lazy">
+              <span>Microsoft Office</span>
+            </div>
+
+            <!-- Microsoft Teams -->
+            <div class="tech-chip" title="Microsoft Teams">
+              <img src="assets/logos/msteams.svg" alt="Microsoft Teams Logo" loading="lazy">
+              <span>Microsoft Teams</span>
+            </div>
+
+            <!-- SharePoint -->
+            <div class="tech-chip" title="SharePoint">
+              <img src="assets/logos/sharepoint.svg" alt="SharePoint Logo" loading="lazy">
+              <span>SharePoint</span>
+            </div>
+
+            <!-- Google Calendar -->
+            <div class="tech-chip" title="Google Calendar">
+              <img src="assets/logos/googlecalendar.svg" alt="Google Calendar Logo" loading="lazy">
+              <span>Google Calendar</span>
+            </div>
+
+            <!-- Google Forms -->
+            <div class="tech-chip" title="Google Forms">
+              <img src="assets/logos/googleforms.svg" alt="Google Forms Logo" loading="lazy">
+              <span>Google Forms</span>
+            </div>
+
+            <!-- Grammarly -->
+            <div class="tech-chip" title="Grammarly">
+              <img src="assets/logos/grammarly.svg" alt="Grammarly Logo" loading="lazy">
+              <span>Grammarly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. ANALYTICS, TOOLS & COMMS -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col gap-4">
+          <div class="category-header-pill">
+            <i data-lucide="bar-chart-2" class="w-4 h-4 text-[#3B6991]"></i>
+            <span>Analytics &amp; Workflows</span>
+          </div>
+
+          <div class="flex flex-wrap gap-3.5">
+            <!-- Power BI -->
+            <div class="tech-chip" title="Power BI">
+              <img src="assets/logos/powerbi.svg" alt="Power BI Logo" loading="lazy">
+              <span>Power BI</span>
+            </div>
+
+            <!-- GitHub -->
+            <div class="tech-chip" title="GitHub">
+              <img src="assets/logos/github.svg" alt="GitHub Logo" loading="lazy">
+              <span>GitHub</span>
+            </div>
+
+            <!-- CRM's -->
+            <div class="tech-chip" title="CRM's">
+              <img src="assets/logos/crm.svg" alt="CRM Salesforce Logo" loading="lazy">
+              <span>CRM's</span>
+            </div>
+
+            <!-- ZOOM -->
+            <div class="tech-chip" title="ZOOM">
+              <img src="assets/logos/zoom.svg" alt="ZOOM Logo" loading="lazy">
+              <span>ZOOM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown when a link is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

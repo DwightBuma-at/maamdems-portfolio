@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Roland James Labus | Software Development Manager</title>
+  <meta name="description" content="Professional Overview, Formal Education, Certifications & Honors, Civic Leadership, and Personal Profile of Roland James Labus.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Outfit (Display Logo), Inter (Body), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ivory: {
+              DEFAULT: '#F8F6F1',
+              paper: '#FFFFFF',
+              subtle: '#F3EFE8',
+            },
+            navy: {
+              DEFAULT: '#1F2A37',
+              muted: '#4B5563',
+              subtle: '#6B7280',
+            },
+            mutedblue: {
+              DEFAULT: '#6B8EAD',
+              light: '#EDF3F8',
+              hover: '#557999',
+            },
+            peach: {
+              DEFAULT: '#E8B7A8',
+              light: '#FCF3F0',
+            },
+            sage: {
+              DEFAULT: '#A8B5A2',
+              light: '#F3F6F2',
+            },
+            line: {
+              DEFAULT: '#E5E1D8',
+              light: '#ECE8E0',
+            }
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(31, 42, 55, 0.04), 0 1px 2px -1px rgba(31, 42, 55, 0.02)',
+            card: '0 8px 24px -4px rgba(31, 42, 55, 0.05), 0 2px 6px -1px rgba(31, 42, 55, 0.02)',
+            elevated: '0 14px 34px -4px rgba(31, 42, 55, 0.07)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury editorial blended mesh gradient background */
+    body {
+      background-color: #FBF9F5;
+      background-image: 
+        radial-gradient(at 90% 12%, rgba(254, 243, 226, 0.95) 0px, transparent 55%),
+        radial-gradient(at 96% 65%, rgba(224, 242, 237, 0.75) 0px, transparent 50%),
+        radial-gradient(at 10% 20%, rgba(253, 246, 238, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(245, 239, 230, 0.6) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Refined entrance animation */
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Controlled star sparkle */
+    @keyframes ambientTwinkle {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    .twinkle-star {
+      animation: ambientTwinkle 4.5s ease-in-out infinite;
+    }
+
+    /* White-silver liquid shimmer running slowly from left to right strictly on hover */
+    @keyframes slowSilverSweep {
+      0% {
+        background-position: -250% 0;
+      }
+      100% {
+        background-position: 250% 0;
+      }
+    }
+
+    .silver-shine {
+      color: #1F2A37;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .silver-shine:hover {
+      background: linear-gradient(
+        110deg,
+        #1F2A37 0%,
+        #1F2A37 35%,
+        #FFFFFF 50%,
+        #CBD5E1 55%,
+        #1F2A37 70%,
+        #1F2A37 100%
+      );
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slowSilverSweep 2.2s linear infinite;
+    }
+
+    /* Custom smooth page scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col selection:bg-peach selection:text-navy">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Name (Left, enlarged with white-silver run through letters on hover) -->
+        <a href="index.html" id="brand-name-btn" class="inline-block py-1 select-none cursor-pointer group" title="Portfolio">
+          <span class="silver-shine font-display font-black text-xl sm:text-2xl tracking-[-0.03em] text-[#0F172A]">
+            Portfolio
+          </span>
+        </a>
+
+        <!-- Centered Navigation Links (Cute & Clean Editorial Pill with About active) -->
+        <nav aria-label="Main Navigation" class="hidden md:flex items-center justify-center">
+          <div class="flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-line shadow-card hover:shadow-elevated transition-shadow duration-300">
+            <a href="index.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Home
+            </a>
+            <a href="about.html" class="nav-link inline-flex items-center justify-center px-5 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-white bg-navy shadow-subtle transition-all duration-200 whitespace-nowrap">
+              About
+            </a>
+            <a href="experience.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Experience
+            </a>
+            <a href="projects.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Projects
+            </a>
+            <a href="skills.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Skills
+            </a>
+            <a href="contact.html" class="nav-link inline-flex items-center justify-center px-4 py-2 text-xs sm:text-[13px] font-medium rounded-full text-navy-muted hover:text-navy hover:bg-[#F3EFE8]/70 transition-all duration-200 whitespace-nowrap">
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Utility / Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Direct Inquiry Trigger -->
+          <a href="contact.html" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-navy bg-white border border-line rounded-lg shadow-subtle hover:border-mutedblue hover:bg-ivory-subtle transition-all">
+            <span>Let's talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-mutedblue"></i>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg bg-white border border-line text-navy hover:bg-ivory-subtle transition-colors shadow-subtle">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation (Solid 100% Opaque Light Theme with Clean Outlines) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 border-b border-line bg-[#FBF9F5] shadow-2xl px-5 pt-3 pb-5 space-y-2">
+      <a href="index.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-navy bg-white border-2 border-navy shadow-sm transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-navy"></span>
+          <span>About</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy"></i>
+      </a>
+      <a href="experience.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Experience</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Projects</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="skills.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Skills</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-navy-muted bg-white border border-line hover:text-navy hover:border-navy/40 transition-all duration-200">
+        <span class="flex items-center gap-2.5">
+          <span>Contact</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-navy-subtle"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== BACKGROUND DOODLE ACCENTS ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+    <svg class="absolute top-28 left-8 sm:left-14 w-8 h-8 text-mutedblue/25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 4 C20 14 14 20 4 20 C14 20 20 26 20 36 C20 26 26 20 36 20 C26 20 20 14 20 4 Z"/>
+    </svg>
+    <svg class="absolute bottom-12 left-10 sm:left-16 w-20 h-10 text-sage/35" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 28 Q 30 8, 55 25 T 95 20" />
+    </svg>
+    <svg class="absolute top-24 right-10 sm:right-20 w-10 h-10 text-peach/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="3 3"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-14 right-14 sm:right-28 w-12 h-8 text-mutedblue/25" viewBox="0 0 50 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M14 8 L6 15 L14 22 M36 8 L44 15 L36 22 M28 6 L22 24" />
+    </svg>
+  </div>  <!-- ==================== MAIN SCROLLABLE ABOUT CONTENT ==================== -->
+  <main class="flex-1 w-full relative z-10 pt-24 sm:pt-28 pb-16 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div class="w-full max-w-[1560px] mx-auto hero-animate space-y-8">
+
+      <!-- ==================== HEADER STRIP (Clean & Professional) ==================== -->
+      <section class="pb-4 border-b border-[#E2DDD5]">
+        <h1 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] text-[#0F172A] tracking-tight">
+          About
+        </h1>
+      </section>
+
+      <!-- ==================== 1. PROFESSIONAL OVERVIEW & BIO CARD ==================== -->
+      <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#1E3A5F] font-bold">
+          <span class="px-2 py-0.5 rounded bg-[#EAF2F8] text-[#1E3A5F]">01</span>
+          <span>&bull;</span>
+          <span>Professional Overview &amp; Bio</span>
+        </div>
+
+        <div class="space-y-5 text-[#0F172A] text-base sm:text-lg leading-relaxed">
+          <p class="font-medium text-[#1E293B]">
+            <strong class="font-bold text-[#0F172A]">Roland James D. Labus</strong> is an IT and software engineering professional with extensive cross-functional experience across software development, IT operations, cloud architecture, system analysis and design, technical project leadership, and enterprise reporting solutions.
+          </p>
+
+          <!-- Core Competencies / Responsibilities Grid -->
+          <div class="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E8E2D8] space-y-3">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-[#334155] font-bold">Key Leadership &amp; Engineering Focus</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 text-sm sm:text-[15px] text-[#1E293B] leading-relaxed">
+              <div class="flex items-start gap-2.5">
+                <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                <span>Directs end-to-end software planning, development, implementation, and system architecture for internal systems and digital solutions.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                <span>Oversees full-stack engineering initiatives across front-end user experience, robust backend APIs, and database integrity.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                <span>Reviews technical requirements and translates complex operational workflows into practical, scalable digital solutions.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-[#2563EB] font-bold text-base leading-none mt-1">&bull;</span>
+                <span>Ensures enterprise standards for quality assurance, high performance, data visibility, and secure IT operations.</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[#334155] text-sm sm:text-base leading-relaxed">
+            <strong class="text-[#0F172A] font-bold">Career Breadth:</strong> Proven track record spanning public sector IT infrastructure, enterprise commercial sales distribution platforms, e-learning digital portals, multi-channel e-commerce systems, and client technology services.
+          </p>
+
+          <!-- Objective Quote -->
+          <blockquote class="border-l-4 border-[#C87D6B] bg-[#FFF8F5] p-5 rounded-r-2xl border-y border-r border-[#F3E2DC] space-y-1.5">
+            <div class="text-xs font-mono text-[#9C4B37] uppercase tracking-wider font-bold">Professional Objective</div>
+            <p class="text-base sm:text-lg italic text-[#0F172A] font-heading font-medium leading-relaxed">
+              &ldquo;To secure a position where I can efficiently contribute my skills and abilities to the growth of the organization and build my professional career.&rdquo;
+            </p>
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- ==================== 2. FORMAL EDUCATION & CERTIFICATIONS (2-COLUMN GRID) ==================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+        <!-- Education Card -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#9C4B37] font-bold mb-5">
+              <span class="px-2 py-0.5 rounded bg-[#FCF0EC] text-[#9C4B37]">02</span>
+              <span>&bull;</span>
+              <span>Formal Education</span>
+            </div>
+
+            <div class="space-y-4">
+              <!-- College -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-4 border-b border-[#E8E2D8]">
+                <div>
+                  <h3 class="font-heading font-bold text-lg text-[#0F172A]">
+                    Bachelor of Science in Computer Science (BSCS)
+                  </h3>
+                  <p class="text-sm font-medium text-[#475569]">
+                    University of Mindanao &bull; Matina, Davao City
+                  </p>
+                </div>
+                <span class="inline-flex items-center text-xs font-mono font-bold text-[#1E3A5F] px-3 py-1 rounded-full bg-[#EAF2F8] border border-[#D5E3EF] w-fit">
+                  Completed 2018
+                </span>
+              </div>
+
+              <!-- High School -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-4 border-b border-[#E8E2D8]">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-[#0F172A]">
+                    Secondary Education
+                  </h3>
+                  <p class="text-sm font-medium text-[#475569]">
+                    Catalunan Pequeño National High School &bull; Davao City
+                  </p>
+                  <p class="text-xs font-semibold text-[#B4533C] mt-1">
+                    Honors: Top 12 in Academic and Curricular
+                  </p>
+                </div>
+                <span class="text-xs font-mono font-semibold text-[#475569]">
+                  Completed 2010
+                </span>
+              </div>
+
+              <!-- Elementary -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-[#0F172A]">
+                    Primary Education
+                  </h3>
+                  <p class="text-sm font-medium text-[#475569]">
+                    Catalunan Pequeño Elementary School &bull; Davao City
+                  </p>
+                </div>
+                <span class="text-xs font-mono font-semibold text-[#475569]">
+                  Completed 2007
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Certifications Card -->
+        <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#2E6F40] font-bold mb-5">
+              <span class="px-2 py-0.5 rounded bg-[#EAF5ED] text-[#2E6F40]">03</span>
+              <span>&bull;</span>
+              <span>Certifications &amp; Honors</span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-[#0F172A]">Database Administration</h4>
+                  <p class="text-xs sm:text-sm font-medium text-[#475569]">Microsoft Training Associate</p>
+                </div>
+                <span class="text-xs font-mono font-bold text-[#1E3A5F] px-2.5 py-0.5 rounded bg-[#EAF2F8] border border-[#D5E3EF] w-fit">MTA Certified</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-[#0F172A]">National Certificate II (NC II)</h4>
+                  <p class="text-xs sm:text-sm font-medium text-[#475569]">Computer Hardware Servicing</p>
+                </div>
+                <span class="text-xs font-mono font-semibold text-[#475569]">Cert. No. 16112402017787</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-[#0F172A]">Overall Champion &mdash; Technology Competition</h4>
+                  <p class="text-xs sm:text-sm font-medium text-[#475569]">Saint Dominic Savio College</p>
+                </div>
+                <span class="text-xs font-mono font-bold text-[#9C4B37] px-2.5 py-0.5 rounded bg-[#FCF0EC] border border-[#F3E2DC] w-fit">Honor Award</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 pb-3 border-b border-[#E8E2D8]">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-[#0F172A]">Certificate of Accomplishment &mdash; OJT Project Manager</h4>
+                  <p class="text-xs sm:text-sm font-medium text-[#475569]">Eversun Software Philippines</p>
+                </div>
+                <span class="text-xs font-mono font-semibold text-[#475569]">2016 &ndash; 2017</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-[#0F172A]">Certificate of Accomplishment &mdash; AT&amp;T Training</h4>
+                  <p class="text-xs sm:text-sm font-medium text-[#475569]">VXI Global Holdings</p>
+                </div>
+                <span class="text-xs font-mono font-semibold text-[#475569]">Credential</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ==================== 3. CIVIC LEADERSHIP & COMMUNITY SERVICE CARD ==================== -->
+      <article class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-card hover:shadow-elevated transition-all duration-300 space-y-4">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#1E3A5F] font-bold">
+          <span class="px-2 py-0.5 rounded bg-[#EAF2F8] text-[#1E3A5F]">04</span>
+          <span>&bull;</span>
+          <span>Civic Leadership &amp; Community Service</span>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-[#0F172A]">
+                Sangguniang Kabataan Kagawad
+              </h3>
+              <p class="text-sm font-medium text-[#2563EB]">
+                Elected Youth Council Official &bull; Barangay Catalunan Pequeño, Davao City, Philippines
+              </p>
+            </div>
+            <span class="inline-flex items-center text-xs sm:text-sm font-mono font-bold text-[#9C4B37] px-3 py-1 rounded-full bg-[#FCF0EC] border border-[#F3E2DC] w-fit">
+              June 2016 &ndash; November 30, 2023
+            </span>
+          </div>
+          <p class="text-sm sm:text-base text-[#334155] leading-relaxed">
+            Served over 7 consecutive years in elected public office. Spearheaded community youth development programs, public service projects, policy consultations, and local leadership initiatives.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      }
+    });
+
+    // Close mobile dropdown when a link is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
